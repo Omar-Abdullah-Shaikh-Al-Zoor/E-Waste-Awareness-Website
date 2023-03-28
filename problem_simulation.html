@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="media/css/style.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-        <script src="scripts/jQuery_script.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
@@ -74,113 +73,6 @@
                 </div>
             </div>
         </article>
-        <script type="text/javascript">
-            const IMG_ARR =["media/images/", "media/images/", "media/images/", "media/images/", "media/images/", "media/images/"]
-            counter = 0;
-            counters = []
-            
-            $(document).ready(function(){
-                $("#InfoModal").modal('show');
-                $("#start-game").on(click, gameStart(), price_updated());
-                $("#buy").on(click, price_check());
-            });
-
-
-            function getRndInteger(min, max) {
-                return Math.floor(Math.random() * (max - min) ) + min;
-            }
-
-            function gameStart() {
-                
-                random = getRndInteger(0,9); //random selection of images
-                img = img_create()
-                $("img").css({
-                    left: Math.random() * ($('.e-wastes div').width() - $(this).width()),
-                    top: Math.random() * ($('.e-wastes div').height() - $(this).height())
-                });
-                $(".e-wastes div").appendChild(img);
-                
-                
-                counters.append("img"+counter);
-                counter++;
-                
-            }
-            function create_img() {
-                img = document.createElement("img");
-                img.src = IMG_ARR[random];
-                img.id = "drag"+counter;
-                img.setAttribute("draggable", "true");
-                img.setAttribute("ondragstart", "drag(event)");
-                img.setAttribute("id", "id=\"img"+counter+"\"");
-                img.style.top =  getRndInteger(0,) + 'px';
-                return img;
-                
-            }
-
-            function price_updated() {
-                while(true) {
-                    price = parseInt($("#price span").text());
-    
-                    if (price < 5000) {
-                        price += 50;
-                        $("#price span").text(price);
-                        document.write(price);
-                        setTimeout(price_updated(), 500);
-                    }
-                    else {
-                        $("#Win-lose-Modal p").text("You lost the game");
-                        $("#Win-lose-Modal p").css({"color":"red"});
-                        $("#Win-lose-Modal").modal('show');
-                        break;
-                    }
-                    
-                }
-                
-            }
-
-            function price_check() {
-                if (price <= 3000) {
-                    $("#Win-lose-Modal p").text("You won the game");
-                    $("#Win-lose-Modal p").css({"color":"green"});
-                    $("#Win-lose-Modal").modal('show');
-                }
-            }
-
-            function allowDrop(ev) {
-                ev.preventDefault();   //to change default settings from preventing dragging to allow it
-            }
-            
-        
-            function drag(ev) {
-                ev.dataTransfer.setData("dd", ev.target.id);  // keep draggable element ID in global data collection reserved by the event object
-                  // Setting public var
-            }
-        
-            function drop(ev) {
-                ev.preventDefault();
-                var data = ev.dataTransfer.getData("dd");    //retrive draggable element ID
-                ev.target.appendChild(document.getElementById(data)); // adding the draggable element to destination element
-                //checking whether the dragged image match the concept by comparing the draggable image id and the destination div ID
-                if(ev.target.id=="div1" && data=="drag4")
-                    alert("correct");
-                else
-                if(ev.target.id=="div2" && data=="drag3")
-                    alert("correct");
-                else
-                    if(ev.target.id=="div3" && data=="drag2")
-                        alert("correct");
-                    else
-                        if(ev.target.id=="div4" && data=="drag1")
-                            alert("correct");
-                        else
-                        {
-                                alert("incorrect");
-                                //return the incorrect image to its original div
-                                (document.getElementById("div5")).appendChild(document.getElementById(data));
-                        }
-            }
-
-
-        </script>
+        <script src="scripts/jQuery_script.js"></script>
     </body>
 </html>
