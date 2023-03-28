@@ -22,3 +22,8 @@
     height: 100%;
     background-color: red;
 }
+
+#Win-lose-Modal p {
+    font-size: 4rem;
+    font-weight: 700;
+}
