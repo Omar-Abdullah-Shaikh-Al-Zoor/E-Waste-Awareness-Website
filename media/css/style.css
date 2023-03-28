@@ -1,0 +1,24 @@
+
+
+.main-game {
+    background-image: url("media/images/background.jpg");
+}
+
+.modal-dialog {
+    --bs-modal-width: 40vw;
+}
+
+.URM-img {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+.e-wastes{
+    flex-basis: 65%;
+    background-color: black;
+}
+.e-wastes img{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
