@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#InfoModal").modal('show');
-    $("#start-game").onclick(); //add price_updated()
+    $("#start-game").onclick(gameStart()); //add price_updated()
     $("#restart-game").onclick();
     $("#purchase").onclick( function () {
         console.log(price);
@@ -12,7 +12,7 @@ $(document).ready(function(){
         }
     });
 })
-const IMG_ARR =["media/images/airpods.png", "media/images/atari_console.png", "media/images/broken_iphone8.png", "media/images/broken_samsung.png", "media/images/broken_smartphone.png", "media/images/camera.png", "media/images/ipad.png", "media/images/gameboy_console.png", "media/images/headphone.png", "media/images/laptop.png", "media/images/ps2_console.png", "media/images/broken_iphone6.png", "media/images/broken_phonemini.png", "media/images/broken_phonemini2.png", "media/images/broken_tv.png", "media/images/old_tv.png", "media/images/broken_videotape.png", "media/images/broken_iphone.png", "media/images/printer.png"]
+const IMG_ARR =["../media/images/airpods.png", "../media/images/atari_console.png", "../media/images/broken_iphone8.png", "../media/images/broken_samsung.png", "../media/images/broken_smartphone.png", "../media/images/camera.png", "../media/images/ipad.png", "../media/images/gameboy_console.png", "../media/images/headphone.png", "../media/images/laptop.png", "../media/images/ps2_console.png", "../media/images/broken_iphone6.png", "../media/images/broken_phonemini.png", "../media/images/broken_phonemini2.png", "../media/images/broken_tv.png", "../media/images/old_tv.png", "../media/images/broken_videotape.png", "../media/images/broken_iphone.png", "../media/images/printer.png"]
 counter = 0;
 counters = []
 price = parseInt($("#price span").text());
@@ -20,29 +20,30 @@ price = parseInt($("#price span").text());
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
+function getRndInteger2(min, max) {
+    return Math.floor(Math.random() * (max - min) );
+}
 
 function gameStart() {
-
-    random = getRndInteger(0,19); //random selection of images
-    img = img_create()
-    $("img").css({
-        left: Math.random() * ($('.e-wastes div').width() - $(this).width()),
-        top: Math.random() * ($('.e-wastes div').height() - $(this).height())
-    });
-    $(".e-wastes div").appendChild(img);
+    box = document.querySelector(".e-wastes div");
+    img = img_create(random);
     
-    counters.append("img"+counter);
-    counter++;
-
+    $(".e-wastes div").append(img);
+    // counters.append("img"+counter);
+    // counter++;
+    setTimeout(gameStart, 2000);
 }
-function create_img() {
+function create_img(random) {
+    random = getRndInteger(0,18); //random selection of images
     img = document.createElement("img");
     img.src = IMG_ARR[random];
-    img.id = "drag"+counter;
-    img.setAttribute("draggable", "true");
-    img.setAttribute("ondragstart", "drag(event)");
-    img.setAttribute("id", "id=\"img"+counter+"\"");
-    img.style.top =  getRndInteger(0,) + 'px';
+    img.backgroundColor = "white";
+    // img.id = "drag"+counter;
+    //img.setAttribute("draggable", "true");
+    //img.setAttribute("ondragstart", "drag(event)");
+    // img.setAttribute("id", "id=\"img"+counter+"\"");
+    img.style.top = getRndInteger2(img.height, box.offsetHeight) + "px";
+    img.style.left = getRndInteger2(img.height, box.offsetWidth)+ "px";
     return img;
     
 }

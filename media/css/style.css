@@ -18,12 +18,10 @@
     background-color: red;
 }
 .e-wastes{
-    background-color: black;
+    background-color: antiquewhite; color;
 }
 .e-wastes img{
-    width: 100%;
-    height: 100%;
-    background-color: red;
+    width: 25vw;
 }
 .iphone {
     flex-basis: 35%;
