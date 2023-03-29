@@ -8,13 +8,16 @@
     --bs-modal-width: 40vw;
 }
 
+
+.URM {
+    flex-basis: 35%;
+}
 .URM-img {
     width: 100%;
     height: 100%;
     background-color: red;
 }
 .e-wastes{
-    flex-basis: 65%;
     background-color: black;
 }
 .e-wastes img{
@@ -22,7 +25,9 @@
     height: 100%;
     background-color: red;
 }
-
+.iphone {
+    flex-basis: 35%;
+}
 #Win-lose-Modal p {
     text-align: center;
     font-size: 2rem;
