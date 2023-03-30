@@ -33,11 +33,13 @@
 }
 
 
-.navbar-nav > li{
-    padding-left:50px;
-    padding-right:50px;
+.padding-ul > li{
+    padding:0 3vw 0 3vw;
 }
 
+.navbar-brand {
+    margin-left: 3vw;
+}
 a:hover{
     background-color: #dcdee0;    
 }
