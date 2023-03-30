@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 200px;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #000000;
+  }
+  
+  h2 {
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .info {
+    color: black;
+    width: 50%;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  li h2 {
+    margin-top: 0;
+  }
+  
+  li p {
+    font-size: 16px;
+  }
+  
