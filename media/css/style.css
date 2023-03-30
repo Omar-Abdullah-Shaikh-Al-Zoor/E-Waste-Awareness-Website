@@ -17,14 +17,11 @@
     background-color: red;
 }
 .e-wastes{
+    display: flex;
+    flex-direction: column;
     flex-basis: 60%;
     background-color: antiquewhite;
-    display: flex;
-    flex-wrap: wrap; /* allow items to wrap onto multiple lines */
-}
-.e-wastes img {
-    width: 10vw;
-    margin: 10px; /* add margin to space out the images */
+    position: relative;
 }
 .iphone {
     flex-basis: 20%;
