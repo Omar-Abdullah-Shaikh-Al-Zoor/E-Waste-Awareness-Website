@@ -8,9 +8,8 @@
     --bs-modal-width: 40vw;
 }
 
-
 .URM {
-    flex-basis: 35%;
+    flex-basis: 20%;
 }
 .URM-img {
     width: 100%;
@@ -18,13 +17,17 @@
     background-color: red;
 }
 .e-wastes{
+    flex-basis: 60%;
     background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap; /* allow items to wrap onto multiple lines */
 }
-.e-wastes img{
+.e-wastes img {
     width: 10vw;
+    margin: 10px; /* add margin to space out the images */
 }
 .iphone {
-    flex-basis: 35%;
+    flex-basis: 20%;
 }
 #Win-lose-Modal p {
     text-align: center;
