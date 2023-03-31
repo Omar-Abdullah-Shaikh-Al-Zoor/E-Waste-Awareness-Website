@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $("#InfoModal").modal('show');
     $("#start-game").click(gameStart); //add price_updated()
+    $("#start-game").click(price_updated);
     $("#restart-game").click();
     $("#purchase").click( function () {
         console.log(price);
