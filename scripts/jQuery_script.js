@@ -24,7 +24,8 @@ function getRndInteger(min, max) {
 function gameStart() {
     console.log("gameStart");
     const eWaste_div = document.querySelector(".e-wastes");
-    const img = create_img(eWaste_div);
+    const drop_div = document.querySelector(".URM");
+    const img = create_img(eWaste_div, drop_div);
     console.log("gameStart10");
     eWaste_div.append(img);
     console.log("gameStart11");
@@ -33,7 +34,7 @@ function gameStart() {
     setTimeout(gameStart, 1000);
 }
     
-function create_img(eWaste_div) {
+function create_img(eWaste_div, drop_div) {
     console.log("gameStart2");
     const random = getRndInteger(0, IMG_ARR.length-1);
     const img = document.createElement("img");
@@ -43,7 +44,11 @@ function create_img(eWaste_div) {
     img.src = IMG_ARR[random];
     img.style.position = "absolute";
     img.style.width = "10vw";
-    img.draggable = true;
+    drop_div.setAttribute("ondrop", "drop(event)");
+    drop_div.setAttribute("ondragover", "allowDrop(event)");
+    img.setAttribute("draggable", "true");
+    img.setAttribute("ondragstart", "drag(event)");
+    // img.draggable = true;
     counters.push(id);
     console.log("gameStart3");
     const pos = getRndPosition(eWaste_div);
