@@ -44,7 +44,7 @@ function create_img(eWaste_div, drop_div) {
     img.src = IMG_ARR[random];
     img.style.position = "absolute";
     img.style.width = "10vw";
-    drop_div.setAttribute("ondrop", "drop(event)");
+    drop_div.setAttribute("ondrop", "drop(event);");
     drop_div.setAttribute("ondragover", "allowDrop(event)");
     img.setAttribute("draggable", "true");
     img.setAttribute("ondragstart", "drag(event)");
@@ -99,5 +99,7 @@ function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("dd");    //retrive draggable element ID
     ev.target.appendChild(document.getElementById(data)); // adding the draggable element to destination element
-    $(".e-wastes div").remove(document.getElementById(data))
+    price -= 50;
+    $("#price span").text(price); 
+    // $(".e-wastes div").remove(document.getElementById(data))
 }
