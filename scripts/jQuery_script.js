@@ -4,6 +4,7 @@ $(document).ready(function(){
     $("#start-game").click(price_updated);
     $("#restart-game").click(restartGame);
     $("#restart-game").click(gameStart);
+    $("#restart-game").click(price_updated);
     $("#purchase").click( function () {
         console.log(price);
         if (price <= 3000) {
@@ -40,7 +41,11 @@ function gameStart() {
     console.log("gameStart11");
     //generatedImagesArray.push(img.id);  // push only the id of the image
     console.log("gameStart12");
-    setTimeout(gameStart, 1000);
+    if (price >= 5000)
+      console.log("Game Over");
+    else 
+      setTimeout(gameStart, 1000);
+
 }
     
 function create_img(eWaste_div, drop_div) {
