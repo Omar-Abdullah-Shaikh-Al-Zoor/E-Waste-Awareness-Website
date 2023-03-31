@@ -48,7 +48,10 @@ a:hover{
     display: none;
 }
 
-
+iframe {
+    width: 35vw;
+    height:35vh;
+}
 
 
 /* Donation Page */

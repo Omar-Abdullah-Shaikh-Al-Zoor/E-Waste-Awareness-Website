@@ -13,18 +13,15 @@
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        
                 <a class="navbar-brand" href="#">
                     <img src="media/images/logo.png" width="50" height="50" alt="">
                 </a>
-                
                 <span class="navbar-text font-weight-bold">
                     E-Waste
                 </span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-        
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto mt-3 padding-ul">
                     <li class="nav-item active">
@@ -43,62 +40,144 @@
                         <a class="nav-link font-weight-bold rounded-2 fs-5" href="donation.html">Donate Now</a>
                     </li>
                 </ul>
-    
-                <button class="btn btn-outline-primary my-2 my-sm-0 me-5" type="button"><a class="text-decoration-none link-secondary" href="problem_simulation.html">Problem Simulation Game</a></button> 
+                <a class="text-decoration-none link-secondary" href="problem_simulation.html">
+                    <button class="btn btn-outline-primary my-2 my-sm-0 me-5" type="button">
+                        Problem Simulation Game
+                    </button> 
+                </a>
                 </div>
             </nav>
         </header>
         <main class="container-fluid">
             <article>
-                <h1>Name of our website</h1>
-                <p>Our website is about E-waste awareness and how to solve the problem of E-waste</p>
-                <iframe width="900" height="600" src="https://www.youtube.com/embed/TyEHtZz0hPA"
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen></iframe>
-                <p>E-waste has plagued and polluted our world for far too long! Help us recycle as much as possible and save the earth from this crisis</p>
-                <img src="media\images\ewaste_dump.jpg" width="200px;" alt="E-waste Dump">
-
-                <div class="info">
-                <h2>What is E-waste?</h2>
-                
-                <img src="media\images\ewaste.jpg" alt="E-waste">
-
-                <p>The term E-Waste refers to any electronic products or equipment that have outlived their usefulness. For example, broken old phones, TVs, computers, printers, faxes,
-                    and many other electronics that are no longer needed or deemed useless. E-waste contains bits of precious metal such as gold, copper, silver, palladium, and nickel, 
-                    which could be retrieved when processed properly.</p>
-
-                <h2>Why is it such a big problem?</h2>
-
-                
-
-                <p>The main problem with E-waste is that there is just too much of it. Millions of tons of E-waste are globally produced annually, and most of it ends up being left for scrap,
+                <section>
+                <div class="container col-xxl-8 px-4 py-5">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                        <div class="col-10 col-sm-8 col-lg-6">
+                            <div class="ratio ratio-16x9 d-flex" style="--bs-aspect-ratio: 60%;">
+                                <iframe src="https://www.youtube.com/embed/TyEHtZz0hPA"
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen class="d-block mx-lg-auto rounded-3 align-self-md-auto img-thumbnail">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="display-6 fw-bold lh-1 mb-3 text-start">
+                                Electronic Waste: What is E-waste?
+                            </h2>
+                            <p class="lead">
+                                The term E-Waste refers to any electronic products or equipment that have outlived their usefulness. For example, broken old phones, TVs, computers, printers, faxes, and many other electronics that are no longer needed or deemed useless. E-waste contains bits of precious metal such as gold, copper, silver, palladium, and nickel, which could be retrieved when processed properly.
+                            </p>
+                            <div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
+                                <a href="./problem_simulation.html" class="text-decoration-none">
+                                    <button type="button" class="btn btn-primary btn-lg px-4 fs-5 me-md-2">Learn actively by trying our Recycling Simulation Game </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+                    <div class="row mb-5">
+                        <div class="col-6 my-auto">
+                            <h2 class="text-center">What is E-waste?</h2>
+                            <p >The term E-Waste refers to any electronic products or equipment that have outlived their usefulness. For example, broken old phones, TVs, computers, printers, faxes, and many other electronics that are no longer needed or deemed useless. E-waste contains bits of precious metal such as gold, copper, silver, palladium, and nickel, which could be retrieved when processed properly.
+                            </p>
+                            <h2 class="mt-5 ">Why is it such a big problem?</h2>
+                            <p>
+                                E-waste is a big problem because it is not properly disposed of. Most of theE-waste is left for scrap, burned with fire, processed by hand through inappropriate methods, or illegally dumped in places where they cannot be recovered. The inappropriate disposal methods of E-waste cause severe environmental damage since E-waste contains toxic chemicals that can poison the soil and water, and, if processed by hand, can pollute the air and cause severe health issues by inhaling its fumes, including cancers, miscarriages, brain damage, liver damage, and other illnesses.
+                            </p>
+                        </div>
+                        <img src="media\images\ewaste.jpg" alt="E-waste" class="col-6" width="300" class="d-block mx-lg-auto img-fluid rounded-3 align-self-md-auto"
+                        alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                    </div>
+                    
+                    <section>
+                        <h2>Are there any solutions to this issue?</h2>
+                        <p class="ms-4"> Of course there is! Here are some of the E-Waste solutions that can help reduce the impact of the E-waste.</p>
+                        <div class="accordion" id="accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#first-collapse" aria-expanded="true" aria-controls="first-collapse">
+                                        Reduce, Reuse, and Recycle
+                                    </button>
+                                </h2>
+                                <div id="first-collapse" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            People can reduce the amount of e-waste produced by reducing the number of electronic devices produced in the first place.
+                                            There is no need to upgrade to a new phone or a new computer each year when people already have an electronic product that can be used for the next 3 to 5 years. Instead of leaving
+                                            unwanted but usable products for scrap, people can sell them or donate them to other people who may need them
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#second-collapse" aria-expanded="false" aria-controls="second-collapse">
+                                        Don't just abandon it! give it a new home and purpose
+                                    </button>
+                                </h2>
+                                <div id="second-collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            As mentioned before, E-waste contains toxic chemicals that are dangerous for people and the environment.
+                                            For example, burning electronics can result in the release of dangerous fumes, which pollutes the air and causes detrimental health issues for people who inhale it. Instead of relying on such methods,
+                                            people could rely on a more environmentally friendly method to dispose of electronics that have reached the end of their life cycle, like sending them to a designated e-waste recycling facility that
+                                            recycles e-waste and recovers precious metal such as gold, silver, copper, etc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#third-collapse" aria-expanded="false" aria-controls="third-collapse">
+                                    Beware and Educate
+                                    </button>
+                                </h2>
+                                <div id="third-collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                        Raising awareness about the problem of e-waste and educating consumers about the proper disposal methods of electronics that are no longer usable, as well as the detrimental impacts that result from handling e-waste inappropriately.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fourth-collapse" aria-expanded="false" aria-controls="fourth-collapse">
+                                        Time for the government to step up!
+                                    </button>
+                                </h2>
+                                <div id="fourth-collapse" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                        Enforcing government laws and policies that ensure the proper disposal of e-waste, and fining anyone who violates those laws. Governments may resort to a similar solution because raising awareness and educating consumers about the proper methods of handling e-waste may not be enough by itself.
+                                        </p>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                    </section>
+            </section>
+            <section class="container mt-sm-5">
+                    <h2>E-waste has plagued and polluted our world for far too long! Help us recycle as much as possible and save the earth from this crisis
+                    </h2>
+                    <p class="mt-3">
+                    The main problem with E-waste is that there is just too much of it. Millions of tons of E-waste are globally produced annually, and most of it ends up being left for scrap,
                     burned with fire, processed by hand through inappropriate methods, or illegally dumped in places where they cannot be recovered. The inappropriate disposal methods of E-waste
                     cause severe environmental damage since E-waste contains toxic chemicals that can poison the soil and water, and, if processed by hand, can pollute the air and cause severe
-                    health issues by inhaling its fumes, including cancers, miscarriages, brain damage, liver damage, and other illnesses.</p>
-
-                <h2>Are there any solutions to this issue?</h2>
-
-                <p> Of course! There are many solutions that can help reduce the impact of E-waste.
-                    <ul>
-                        <li><h2>Reduce, Reuse, and Recycle</h2>
-                            <p>People can reduce the amount of e-waste produced by reducing the number of electronic devices produced in the first place.
-                                There is no need to upgrade to a new phone or a new computer each year when people already have an electronic product that can be used for the next 3 to 5 years. Instead of leaving
-                                unwanted but usable products for scrap, people can sell them or donate them to other people who may need them.</p></li>
-
-                        <li><h2>Don't just abandon it! give it a new home and purpose</h2><p>As mentioned before, E-waste contains toxic chemicals that are dangerous for people and the environment.
-                            For example, burning electronics can result in the release of dangerous fumes, which pollutes the air and causes detrimental health issues for people who inhale it. Instead of relying on such methods,
-                            people could rely on a more environmentally friendly method to dispose of electronics that have reached the end of their life cycle, like sending them to a designated e-waste recycling facility that
-                            recycles e-waste and recovers precious metal such as gold, silver, copper, etc.</p></li>
-
-                            <li><h2>Beware and Educate</h2><p>Raising awareness about the problem of e-waste and educating consumers about the proper disposal methods of electronics that are no longer usable, as well as the
-                                detrimental impacts that result from handling e-waste inappropriately.</p></li>
-
-                        <li><h2>Time for the government to step up!</h2><p>Enforcing government laws and policies that ensure the proper disposal of e-waste, and fining anyone who violates those laws. Governments may resort to a similar solution because raising
-                                awareness and educating consumers about the proper methods of handling e-waste may not be enough by itself.</p></li>
-                    </ul>
+                    health issues by inhaling its fumes, including cancers, miscarriages, brain damage, liver damage, and other illnesses.
                     </p>
-                </div>
+                    <div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
+                        <a href="./problem_simulation.html" class="text-decoration-none">
+                            <button type="button" class="btn btn-success btn-lg px-4 me-md-2">Learn actively by trying our Recycling Simulation Game </button>
+                        </a>
+                    </div>
+                </section>
+                
+                <!-- <img src="media\images\ewaste_dump.jpg" width="200px;" alt="E-waste Dump">                 -->
             </article>
         </main>
     </body>
