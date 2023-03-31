@@ -59,8 +59,8 @@ function getRndPosition(eWaste_div) {
     console.log("gameStart4");
     const rect = eWaste_div.getBoundingClientRect();
     console.log("gameStart5");
-    const top = getRndInteger(rect.top, rect.bottom - 50);
-    const left = getRndInteger(0, 750);
+    const top = getRndInteger(rect.top, rect.bottom - 80);
+    const left = getRndInteger(0, 680);
     console.log("gameStart6");
     return { top, left };
 }   
