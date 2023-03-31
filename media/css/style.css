@@ -1,5 +1,35 @@
 
+/* Home Page */
+.cite-reference {
+    background-color: #f2f2f2;
+    border-left: 6px solid #282ee4;
+    padding: 10px 20px;
+}
 
+.cite-reference p:first-of-type {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.cite-reference p:last-of-type {
+    font-style: italic;
+    margin: 10px 0 0;
+}
+
+.cite-reference a {
+    color: #242cff;
+    font-weight: bold;
+    text-decoration: none;
+    }
+
+.cite-source {
+    font-size: 14px;
+    text-align: right;
+}
+
+
+/* Simulation Game */
 .main-game {
     background-image: url("media/images/background.jpg");
 }
