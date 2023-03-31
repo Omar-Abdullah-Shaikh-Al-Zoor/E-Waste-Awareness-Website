@@ -22,6 +22,7 @@
     flex-basis: 60%;
     background-color: antiquewhite;
     position: relative;
+    height: 100vh;
 }
 .iphone {
     flex-basis: 20%;

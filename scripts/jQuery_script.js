@@ -9,13 +9,15 @@ $(document).ready(function(){
         console.log(price);
         if (price <= 3000) {
             console.log(price);
+            stop =1;
             $("#Win-lose-Modal p").text("You won the game");
             $("#Win-lose-Modal p").css({"color":"green"});
             $("#Win-lose-Modal").modal('show');
         }
     });
 });
-const IMG_ARR =["../E-Waste-Awareness-Website/media/images/atari_console.png", "../E-Waste-Awareness-Website/media/images/broken_iphone8.png", "../E-Waste-Awareness-Website/media/images/broken_samsung.png", "../E-Waste-Awareness-Website/media/images/broken_smartphone.png", "../E-Waste-Awareness-Website/media/images/camera.png", "../E-Waste-Awareness-Website/media/images/gameboy_console.png", "../E-Waste-Awareness-Website/media/images/headphone.png", "../E-Waste-Awareness-Website/media/images/ps2_console.png", "../E-Waste-Awareness-Website/media/images/broken_iphone6.png", "../E-Waste-Awareness-Website/media/images/broken_phonemini.png", "../E-Waste-Awareness-Website/media/images/broken_phonemini2.png", "../E-Waste-Awareness-Website/media/images/broken_tv.png", "../E-Waste-Awareness-Website/media/images/old_tv.png", "../E-Waste-Awareness-Website/media/images/broken_videotape.png", "../E-Waste-Awareness-Website/media/images/broken_iphone.png", "../E-Waste-Awareness-Website/media/images/broken_printer.png"]
+stop =0;
+const IMG_ARR =["../media/images/atari_console.png", "../media/images/broken_iphone8.png", "../media/images/broken_samsung.png", "../media/images/broken_smartphone.png", "../media/images/camera.png", "../media/images/gameboy_console.png", "../media/images/headphone.png", "../media/images/ps2_console.png", "../media/images/broken_iphone6.png", "../media/images/broken_phonemini.png", "..media/images/broken_phonemini2.png", "../media/images/broken_tv.png", "../media/images/old_tv.png", "../media/images/broken_videotape.png", "../media/images/broken_iphone.png", "../media/images/broken_printer.png"]
 counter = 0;
 counters = []
 price = parseInt($("#price span").text());
@@ -39,12 +41,10 @@ function gameStart() {
     console.log("gameStart10");
     eWaste_div.append(img);
     console.log("gameStart11");
-    //generatedImagesArray.push(img.id);  // push only the id of the image
     console.log("gameStart12");
-    if (price >= 5000)
-      console.log("Game Over");
-    else 
-      setTimeout(gameStart, 1000);
+    if (!(price >= 5000 || stop === 1)) {
+        setTimeout(gameStart, 1000);
+    }
 
 }
     
@@ -86,17 +86,27 @@ function getRndPosition(eWaste_div) {
 
 function price_updated() {
     if (price < 5000) {
-        price += 50;
+        price += 100;
         $("#price span").text(price);
-        setTimeout(price_updated, 3000);
+        if (price <= 3000) {
+            $("#purchase").removeClass("btn-danger");
+            $("#purchase").addClass("btn-success");
+        }
+        else if (price > 3000) {
+            $("#purchase").addClass("btn-danger");
+            $("#purchase").removeClass("btn-success");
+        }
+        if (!(price >= 5000 || stop === 1)) {
+        setTimeout(price_updated, 1500);
+        }
     }
     else if (price >= 5000){
         $("#Win-lose-Modal p").text("Good luck next time");
         $("#Win-lose-Modal p").css({"color":"red"});
         $("#Win-lose-Modal").modal('show');
     }
-    
 }
+
     
 
 function allowDrop(ev) {
@@ -113,7 +123,6 @@ function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("dd");    //retrive draggable element ID
     ev.target.appendChild(document.getElementById(data)); // adding the draggable element to destination element
-    price -= 50;
+    price -= 150;
     $("#price span").text(price); 
-    // $(".e-wastes div").remove(document.getElementById(data))
 }
