@@ -2,7 +2,8 @@ $(document).ready(function(){
     $("#InfoModal").modal('show');
     $("#start-game").click(gameStart); //add price_updated()
     $("#start-game").click(price_updated);
-    $("#restart-game").click();
+    $("#restart-game").click(restartGame);
+    $("#restart-game").click(gameStart);
     $("#purchase").click( function () {
         console.log(price);
         if (price <= 3000) {
@@ -21,6 +22,13 @@ price = parseInt($("#price span").text());
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
     }
+
+function restartGame(){
+    document.querySelectorAll(".e-wastes img").forEach(img => img.remove());
+    price = 4000;
+    $("#price span").text(price); 
+  
+}
 
 function gameStart() {
     console.log("gameStart");
