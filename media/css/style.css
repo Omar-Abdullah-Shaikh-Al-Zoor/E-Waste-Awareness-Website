@@ -93,6 +93,11 @@ iframe {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.1);
   }
+
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bs-secondary);
+}
 /* Additional custom styles */
 .donate-body {
     background-color: #f0f0f0;
