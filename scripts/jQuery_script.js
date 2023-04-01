@@ -17,7 +17,7 @@ $(document).ready(function(){
     });
 });
 stop =0;
-const IMG_ARR =["../media/images/atari_console.png", "../media/images/broken_iphone8.png", "../media/images/broken_samsung.png", "../media/images/broken_smartphone.png", "../media/images/camera.png", "../media/images/gameboy_console.png", "../media/images/headphone.png", "../media/images/ps2_console.png", "../media/images/broken_iphone6.png", "../media/images/broken_phonemini.png", "..media/images/broken_phonemini2.png", "../media/images/broken_tv.png", "../media/images/old_tv.png", "../media/images/broken_videotape.png", "../media/images/broken_iphone.png", "../media/images/broken_printer.png"]
+const IMG_ARR =["../media/images/atari_console.png", "../media/images/broken_samsung.png", "../media/images/broken_smartphone.png", "../media/images/camera.png", "../media/images/gameboy_console.png", "../media/images/headphone.png", "../media/images/ps2_console.png", "../media/images/broken_iphone6.png", "../media/images/broken_phonemini.png", "../media/images/broken_tv.png", "../media/images/old_tv.png", "../media/images/broken_videotape.png", "../media/images/broken_iphone.png", "../media/images/broken_printer.png"]
 counter = 0;
 counters = []
 price = parseInt($("#price span").text());
@@ -30,7 +30,7 @@ function restartGame(){
     document.querySelectorAll(".e-wastes img").forEach(img => img.remove());
     price = 4000;
     $("#price span").text(price); 
-  
+    stop = 0;
 }
 
 function gameStart() {
@@ -122,7 +122,8 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("dd");    //retrive draggable element ID
-    ev.target.appendChild(document.getElementById(data)); // adding the draggable element to destination element
+    element = document.getElementById(data);
+    element.remove();   
     price -= 150;
     $("#price span").text(price); 
 }
