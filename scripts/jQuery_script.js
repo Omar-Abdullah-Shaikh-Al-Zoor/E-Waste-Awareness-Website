@@ -15,6 +15,7 @@ $(document).ready(function(){
     });
 });
 stop = 0;
+counter = 0;
 const IMG_ARR =["../media/images/broken_keyboard.png","../media/images/atari_console.png", "../media/images/broken_samsung.png", "../media/images/broken_smartphone.png", "../media/images/camera.png", "../media/images/gameboy_console.png", "../media/images/headphone.png", "../media/images/ps2_console.png", "../media/images/broken_iphone6.png", "../media/images/broken_phonemini.png", "../media/images/broken_tv.png", "../media/images/old_tv.png", "../media/images/broken_videotape.png", "../media/images/broken_iphone.png", "../media/images/broken_printer.png"]
 price = parseInt($("#price span").text());
 
@@ -34,18 +35,22 @@ function gameStart() {
     const drop_div = document.querySelector(".URM");
     const img = create_img(eWaste_div, drop_div);
     eWaste_div.append(img);
-    if (!(price >= 5000 || stop === 1)) {
-        setTimeout(gameStart, 1000);
-    }
-    else {
+    if (price >= 5000) {
         lose_game();
     }
+    if (stop !== 1) {
+        setTimeout(gameStart, 1000);
+    }
+    
 
 }
     
 function create_img(eWaste_div, drop_div) {
     const random = getRndInteger(0, IMG_ARR.length-1);
     const img = document.createElement("img");
+    const id = "img" + counter;
+    img.id = id;
+    counter++;
     img.src = IMG_ARR[random];
     img.style.position = "absolute";
     img.style.width = "10vw";
@@ -83,24 +88,31 @@ function price_updated() {
         }
     }
 }
+
 function lose_game() {
     $("#Win-lose-Modal p").text("Good luck Next time");
     $("#Win-lose-Modal p").css({"color":"red"});
     $("#Win-lose-Modal").modal('show');
 }
-function allowDrop(ev) {
-    ev.preventDefault();  
+
+function allowDrop(event) {
+    event.preventDefault();
 }
 
-function drag(ev) {
-    ev.dataTransfer.setData("dd", ev.target.id);  
+function drag(event) {
+    event.dataTransfer.setData("dd", event.target.id);
 }
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("dd");
-    element = document.getElementById(data);
-    element.remove();   
+function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("dd");
+    var data_element = document.getElementById(data);
+    data_element.remove();
     price -= 150;
     $("#price span").text(price); 
 }
+
+
+
+
+
