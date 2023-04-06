@@ -100,12 +100,12 @@ function allowDrop(event) {
 }
 
 function drag(event) {
-    event.dataTransfer.setData("dd", event.target.id);
+    event.dataTransfer.setData("DragDrop", event.target.id);
 }
 
 function drop(event) {
     event.preventDefault();
-    var data = event.dataTransfer.getData("dd");
+    var data = event.dataTransfer.getData("DragDrop");
     var data_element = document.getElementById(data);
     data_element.remove();
     price -= 150;
