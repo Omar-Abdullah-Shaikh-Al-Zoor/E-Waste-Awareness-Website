@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#InfoModal").modal('show');
+    $('#InfoModal').modal('show', {backdrop: 'static'});
     $("#start-game").click(gameStart);
     $("#start-game").click(price_updated);
     $("#restart-game").click(restartGame);
@@ -10,7 +10,7 @@ $(document).ready(function(){
             stop = 1;
             $("#Win-lose-Modal p").text("You won the game");
             $("#Win-lose-Modal p").css({"color":"green"});
-            $("#Win-lose-Modal").modal('show');
+            $("#Win-lose-Modal").modal('show', {backdrop: 'static'});
         }
     });
 });
@@ -90,9 +90,10 @@ function price_updated() {
 }
 
 function lose_game() {
+    stop = 1;
     $("#Win-lose-Modal p").text("Good luck Next time");
     $("#Win-lose-Modal p").css({"color":"red"});
-    $("#Win-lose-Modal").modal('show');
+    $("#Win-lose-Modal").modal('show', {backdrop: 'static'});
 }
 
 function allowDrop(event) {
