@@ -55,10 +55,10 @@
                     <img src="media\images\recycle.jpg" alt="Factory Worker" class="rounded mx-auto d-block img-fluid img-thumbnail my-2 w-75">
                     <h2>Sims Recycling Solutions</h2>
                     <p>
-                        There are several successful e-waste management and recycling companies around the world that have implemented
+                        There are several successful E-waste management and recycling companies around the world that have implemented
                         innovative practices and have a strong commitment to sustainability. One such company is Sims Recycling Solutions,
                         which is headquartered in the United States and operates in over 20 countries. Sims Recycling Solutions has a proven 
-                        track record of recycling electronic waste and recycled 220,000 tonnes of e-waste in 2020.
+                        track record of recycling electronic waste and recycled 220,000 tonnes of E-waste in 2020.
                     </p>
                     <h2>Electronic Recyclers International (ERI)</h2>
                     <p>
@@ -68,23 +68,23 @@
                     </p>
                     <h2>TES-AMM</h2>
                     <p>
-                        TES-AMM is a Singapore-based e-waste recycling company that operates in over 20 countries. The company is committed to sustainability
+                        TES-AMM is a Singapore-based E-waste recycling company that operates in over 20 countries. The company is committed to sustainability
                         and has implemented a number of innovative recycling processes. In 2019, TES-AMM recycled over 100,000 tonnes of e-waste.
                     </p>
                     <h2>Greentec</h2>
                     <p>
                         Greentec is a Canadian e-waste recycling company that specializes in the refurbishment and resale of electronic devices.
                         The company has a strong commitment to sustainability and has implemented a number of environmentally friendly practices.
-                        Greentec has won numerous awards for its innovative approach to e-waste recycling.
+                        Greentec has won numerous awards for its innovative approach to E-waste recycling.
                     </p>
                     <h2>Attero</h2>
                     <p>
-                        Finally, Attero is an Indian e-waste recycling company that has won several awards for its innovative recycling processes.
-                        The company has a zero-landfill policy and is committed to minimizing the environmental impact of e-waste. In 2020, Attero
-                        recycled over 25,000 tonnes of e-waste.
+                        Finally, Attero is an Indian E-waste recycling company that has won several awards for its innovative recycling processes.
+                        The company has a zero-landfill policy and is committed to minimizing the environmental impact of E-waste. In 2020, Attero
+                        recycled over 25,000 tonnes of E-waste.
                     </p>
                     <p>
-                        These companies are just a few examples of successful e-waste management and recycling companies around the world.
+                        These companies are just a few examples of successful E-waste management and recycling companies around the world.
                         Each of them has implemented innovative practices and a strong commitment to sustainability, which has contributed 
                         to their success in the industry.
                     </p>
