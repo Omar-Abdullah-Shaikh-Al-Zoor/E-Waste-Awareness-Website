@@ -25,22 +25,22 @@
                     <div class="collapse navbar-collapse" id="navbar-main">
                     <ul class="navbar-nav m-auto padding-ul text-center">
                         <li class="nav-item active">
-                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="index.html">Home</a>
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="solutions.html">Our Solutions</a>
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="solutions.php">Our Solutions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="success.html">Success Stories</a>
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="success.php">Success Stories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="organizations.html">IEMN</a>
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="organizations.php">IEMN</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="donation.html">Donate Now</a>
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="donation.php">Donate Now</a>
                         </li>
                     </ul>
-                    <a class="text-decoration-none link-secondary my-sm-0 me-4" href="problem_simulation.html">
+                    <a class="text-decoration-none link-secondary my-sm-0 me-4" href="problem_simulation.php">
                         <button class="btn btn-outline-primary" type="button">
                             Problem Simulation Game
                         </button> 
@@ -53,7 +53,9 @@
             <article>
                 <section>
                     <h1 class="text-center">Are there any solutions to this issue?</h1>
-                    <p class="ms-4 fs-5"> Of course there is! Here are some of the E-Waste solutions that can help reduce the impact of the E-waste.</p>
+                    <p class="ms-4 fs-5"> Our website serves as an all-in-one central hub that connects you with our partners, who are dedicated towards creating a more sustainable enviroment.
+                         This way, our partners will handle massive amounts of E-waste in a more clean and enviroment-firendly manner, and you won't have to deal with the hassle of cleaning
+                          your property from E-waste. While our website does provide ways to rid yourself from E-waste, there are also ways for you to deal with E-waste yourself:</p>
                 </section>
                 <section>
                     <div class="card  my-3">
