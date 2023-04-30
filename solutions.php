@@ -53,7 +53,7 @@
             <article>
                 <section>
                     <h1 class="text-center">Are there any solutions to this issue?</h1>
-                    <p class="ms-4 fs-5"> Our website serves as an all-in-one central hub that connects you with our partners, who are dedicated towards creating a more sustainable enviroment.
+                    <p class="ms-4 fs-5"> Our organization serves as an all-in-one central hub that collects your E-waste and sends masses of E-waste to our hard-working partners, who are dedicated towards creating a more sustainable enviroment.
                          This way, our partners will handle massive amounts of E-waste in a more clean and enviroment-firendly manner, and you won't have to deal with the hassle of cleaning
                           your property from E-waste. While our website does provide ways to rid yourself from E-waste, there are also ways for you to deal with E-waste yourself:</p>
                 </section>
@@ -106,7 +106,11 @@
                         <div class="card-body">
                             <p>Enforcing government laws and policies that ensure the proper disposal of e-waste, and fining anyone who violates those laws.
                                 Governments may resort to a similar solution because raising awareness and educating consumers about the proper methods of handling 
-                                e-waste may not be enough by itself.</p>
+                                e-waste may not be enough by itself. Governments world wide need provide dedicated E-waste collection and transportation services to reduce
+                                 the chance of E-waste being handled in an enviromentally damaging manner.</p>
+
+                                <p>Countries covered by electronic waste legislation, policy, and regulation from 2014 to 2019: </p>
+                                <img src="media\images\Government E-waste Regulation.png" alt="Statistics of countries enforcing E-waste regulations and policies">
                         </div>
                     </div>
                 </section>
@@ -118,12 +122,12 @@
                     <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
                     <h5 class="text-uppercase mb-3">Pages</h5>
                     <ul class="list-unstyled mb-0">
-                        <li><a class="text-primary" href="./index.html">Home</a></li>
-                        <li><a class="text-primary" href="./solutions.html">Our Solutions</a></li>
-                        <li><a class="text-primary" href="./success.html">Success Stories</a></li>
-                        <li><a class="text-primary" href="./organizations.html">IEMN</a></li>
-                        <li><a class="text-primary" href="./donation.html">Donate Now</a></li>
-                        <li><a class="text-primary" href="./problem_simulation.html">Problem Simulation Game</a></li>
+                        <li><a class="text-primary" href="./index.php">Home</a></li>
+                        <li><a class="text-primary" href="./solutions.php">Our Solutions</a></li>
+                        <li><a class="text-primary" href="./success.php">Success Stories</a></li>
+                        <li><a class="text-primary" href="./organizations.php">IEMN</a></li>
+                        <li><a class="text-primary" href="./donation.php">Donate Now</a></li>
+                        <li><a class="text-primary" href="./problem_simulation.php">Problem Simulation Game</a></li>
                     </ul>
                     </div>
                     <div class="col-lg-2 col-md-4 mb-4 mb-md-0 text-center me-5">
