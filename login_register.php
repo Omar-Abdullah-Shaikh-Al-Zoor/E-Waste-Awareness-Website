@@ -96,22 +96,29 @@
         <div class="card container shadow text-secondary">
             <div class="card-item">
                 <div class="card-header">
-                    <h1 class="text-secondary" id="title">Create or Log in to your account</h1>
+                    <h1 class="text-secondary center" id="title">Log-in to your account</h1>
                 </div>
-                <div class="card-body log-in">
+                <div class="card-body log-in" id="CardBody">
                     <form id="login-form">
                         <div class="d-flex justify-content-center mb-5 ">
-                            <label for="username-email" class="w-50">
-                                <p class="fs-5">Enter your username or email:</p>
-                                <input id="username-email" name="username-email" class="form-control"
-                                    placeholder="username or email">
+                            <label for="username" class="w-50">
+                                <p class="fs-5">Enter your username:</p>
+                                <input id="username" name="username" class="form-control"
+                                    placeholder="username or email" required>
                             </label>
                         </div>
                         <div class="d-flex justify-content-center mb-3">
                             <label for="password" class="w-50">
-                                <p class="fs-5">Enter your password:</p>
-                                <input id="password" name="password" class="form-control" placeholder="password">
+                            <p class="fs-5">Enter your password</p>
+                                <div class="password-container">
+                                    <input id="password" name="password" class="form-control password-input"
+                                        placeholder="Password" type="password" required>
+                                    <i class="fa-solid fa-eye toggle-password"></i>
+                                </div>
                             </label><br />
+                        </div>
+                        <div id="login-message">
+
                         </div>
                         <div class="center d-flex justify-content-center mt-5">
                             <button class="btn btn-success w-25 mx-3" type="submit">Log In</button>
@@ -124,115 +131,132 @@
         </div>
     </main>
 </body>
-<script>
-function ajax_post() {}
-// Attach an event listener to the form submit button
-$('#submit-button').click('click', function(event) {
-    // Prevent the default form submission
-    event.preventDefault();
 
-    // Send an AJAX request to the server
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onload = function() {
-        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            var response = xmlhttp.responseText;
+<script>
+    $(document).ready(function() {
+    (function() {
+        'use strict';
+        function ajax_post(event) {
+            event.preventDefault();
+            if ($("#CardBody").hasClass("log-in")) {
+                // Send an AJAX request to the server
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onload = function() {
+                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                        var response = xmlhttp.responseText;
+                        if (response === "username not found") {
+                        $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-danger text-center'>username not found</span></div>")
+                        } else if (response === "incorrect password") {
+                        $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-danger text-center'>Incorrect password</span></div>")
+                        } else if (response === "success login") {
+                        $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-success text-center'>Login successful</span></div>")
+                        }
+                    }
+                };
+                xmlhttp.open("POST", "db_login.php", true);
+                xmlhttp.send(new FormData(event.target));
+            } else if ($("#CardBody").hasClass("sign-up")) {
+                // Send an AJAX request to the server
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onload = function() {
+                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                        var response = xmlhttp.responseText;
+                        if (response === "success") {
+                            $("#sign-message").html("<span class='text-success'>sign up successful</span>")
+                        } else if (response === "failed") {
+                            $("#sign-message").html("<span class='text-danger'>sign up failed</span>")
+                        }
+                    }
+                };
+                xmlhttp.open("POST", "db_login.php", true);
+                xmlhttp.send(new FormData(event.target));
+            }
         }
-    };
-    xmlhttp.open("POST", "db_donation.php", true);
-    xmlhttp.send(new FormData(event.target));
 
-});
-</script>
-
-<script>
-(function() {
-    'use strict';
-
-    const forms = document.querySelectorAll('.needs-validation');
-
-    Array.from(forms).forEach(function(form) {
-        form.addEventListener('submit', function(event) {
+        // const forms = document.querySelectorAll('.needs-validation');
+        $("#login-form").submit(function(event) {
+            event.preventDefault();
+            ajax_post(event);
+        });
+        Array.from(forms).forEach(function(form) {
+            form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Add this line to prevent form submission
             if (!form.checkValidity()) {
+                event.stopPropagation();
+            }
+            ajax_post(event);
+            form.classList.add('was-validated');
+        }, false);
+        });
+        function validateInputs(event) {
+            const usernameInput = document.getElementById('username');
+            const fnameInput = document.getElementById('fname');
+            const lnameInput = document.getElementById('lname');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const password2Input = document.getElementById('password2');
+
+            const usernameRegex = /^[a-zA-Z0-9_]{5,}$/;
+            const nameRegex = /^[a-zA-Z\s']+$/;
+            const emailRegex = /^\S+@\S+\.\S+$/;
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
+
+
+            let isValid = true;
+
+            if (!usernameRegex.test(usernameInput.value.trim())) {
+                usernameInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                usernameInput.classList.remove('is-invalid');
+            }
+
+            if (!nameRegex.test(fnameInput.value.trim())) {
+                fnameInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                fnameInput.classList.remove('is-invalid');
+            }
+
+            if (!nameRegex.test(lnameInput.value.trim())) {
+                lnameInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                lnameInput.classList.remove('is-invalid');
+            }
+
+            if (!emailRegex.test(emailInput.value.trim())) {
+                emailInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                emailInput.classList.remove('is-invalid');
+            }
+
+            if (!passwordRegex.test(passwordInput.value)) {
+                passwordInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                passwordInput.classList.remove('is-invalid');
+            }
+
+            if (password2Input.value !== passwordInput.value) {
+                password2Input.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                password2Input.classList.remove('is-invalid');
+            }
+
+            if (!isValid) {
                 event.preventDefault();
                 event.stopPropagation();
-            } else {
-                validateInputs(event);
             }
-            form.classList.add('was-validated');
-        });
-    });
-
-    function validateInputs(event) {
-        const usernameInput = document.getElementById('username');
-        const fnameInput = document.getElementById('fname');
-        const lnameInput = document.getElementById('lname');
-        const emailInput = document.getElementById('email');
-        const passwordInput = document.getElementById('password');
-        const password2Input = document.getElementById('password2');
-
-        const usernameRegex = /^[a-zA-Z0-9_]{5,}$/;
-        const nameRegex = /^[a-zA-Z\s']+$/;
-        const emailRegex = /^\S+@\S+\.\S+$/;
-        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
-
-
-        let isValid = true;
-
-        if (!usernameRegex.test(usernameInput.value.trim())) {
-            usernameInput.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            usernameInput.classList.remove('is-invalid');
-        }
-
-        if (!nameRegex.test(fnameInput.value.trim())) {
-            fnameInput.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            fnameInput.classList.remove('is-invalid');
-        }
-
-        if (!nameRegex.test(lnameInput.value.trim())) {
-            lnameInput.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            lnameInput.classList.remove('is-invalid');
-        }
-
-        if (!emailRegex.test(emailInput.value.trim())) {
-            emailInput.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            emailInput.classList.remove('is-invalid');
-        }
-
-        if (!passwordRegex.test(passwordInput.value)) {
-            passwordInput.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            passwordInput.classList.remove('is-invalid');
-        }
-
-        if (password2Input.value !== passwordInput.value) {
-            password2Input.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            password2Input.classList.remove('is-invalid');
-        }
-
-        if (!isValid) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-    }
-
-})();
+        }})()});
 </script>
 
 
 <script>
 function ShowLogIn() {
-    current = document.querySelector(".card-body");
+    current = $("#CardBody");
     if (current.classList.contains("sign-in")) {
         current.innerHTML = `
         <form id="login-form">
@@ -262,7 +286,7 @@ function ShowLogIn() {
 }
 
 function ShowSignIn() {
-    current = document.querySelector(".card-body");
+    current = $("#CardBody");
     if (current.classList.contains("log-in")) {
         current.innerHTML =
             `<form id="signup-form" class="row g-3 needs-validation" novalidate action="credentials.php"
@@ -317,10 +341,10 @@ function ShowSignIn() {
                                     values
                                 </div>
                             </label>
-                            <label for="password2" class="mx-4 flex-fill">
+                            <label for="repeat-password" class="mx-4 flex-fill">
                                 <p class="fs-5">Confirm your password</p>
                                 <div class="password-container">
-                                    <input id="password2" name="password2" class="form-control password-input"
+                                    <input id="repeat-password" name="repeat-password" class="form-control password-input"
                                         placeholder="Confirm password" type="password" required>
                                     <i class="fa-solid fa-eye toggle-password"></i>
                                 </div>
@@ -353,41 +377,8 @@ function ShowSignIn() {
     }
 }
 </script>
-<script>
-
-</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- <script>
-        $(document).ready(function() {
-        $('#username, #email').keyup(function(event){
-            var username = $('#username').val();
-            var email = $('#email').val();
-            if (username === "" || email === "") {
-            return;
-            }
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onload = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                console.log(xmlhttp.responseText); // add console.log statement
-                if (xmlhttp.responseText == "User already exists") {
-                $('#usernameFeedback').html('This username is already taken').css('display', 'block');
-                } else if (xmlhttp.responseText == "Email already used") {
-                $('#emailFeedback').html('This email is already used for a different account').css('display', 'block');
-                } else if (xmlhttp.responseText == "Username and email are already in use") {
-                $('#usernameFeedback').html('This username is already taken').css('display', 'block');
-                $('#emailFeedback').html('This email is already used for a different account').css('display', 'block');
-                } else {
-                $('#usernameFeedback').html('').css('display', 'none');
-                $('#emailFeedback').html('').css('display', 'none');
-                }
-            }
-            };
-            var url = "userFound.php?username=" + username + "&email=" + email;
-            xmlhttp.open("GET", url, true);
-            xmlhttp.send();
-        });
-        });
-</script> -->
+
 <script>
 const passwordInputs = document.querySelectorAll(".password-input");
 const togglePasswordButtons = document.querySelectorAll(".toggle-password");
