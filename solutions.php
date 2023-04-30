@@ -122,12 +122,12 @@
                     <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
                     <h5 class="text-uppercase mb-3">Pages</h5>
                     <ul class="list-unstyled mb-0">
-                        <li><a class="text-primary" href="./index.html">Home</a></li>
-                        <li><a class="text-primary" href="./solutions.html">Our Solutions</a></li>
-                        <li><a class="text-primary" href="./success.html">Success Stories</a></li>
-                        <li><a class="text-primary" href="./organizations.html">IEMN</a></li>
-                        <li><a class="text-primary" href="./donation.html">Donate Now</a></li>
-                        <li><a class="text-primary" href="./problem_simulation.html">Problem Simulation Game</a></li>
+                        <li><a class="text-primary" href="./index.php">Home</a></li>
+                        <li><a class="text-primary" href="./solutions.php">Our Solutions</a></li>
+                        <li><a class="text-primary" href="./success.php">Success Stories</a></li>
+                        <li><a class="text-primary" href="./organizations.php">IEMN</a></li>
+                        <li><a class="text-primary" href="./donation.php">Donate Now</a></li>
+                        <li><a class="text-primary" href="./problem_simulation.php">Problem Simulation Game</a></li>
                     </ul>
                     </div>
                     <div class="col-lg-2 col-md-4 mb-4 mb-md-0 text-center me-5">
