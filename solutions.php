@@ -53,7 +53,9 @@
             <article>
                 <section>
                     <h1 class="text-center">Are there any solutions to this issue?</h1>
-                    <p class="ms-4 fs-5"> Of course there is! Here are some of the E-Waste solutions that can help reduce the impact of the E-waste.</p>
+                    <p class="ms-4 fs-5"> Our website serves as an all-in-one central hub that connects you with our partners, who are dedicated towards creating a more sustainable enviroment.
+                         This way, our partners will handle massive amounts of E-waste in a more clean and enviroment-firendly manner, and you won't have to deal with the hassle of cleaning
+                          your property from E-waste. While our website does provide ways to rid yourself from E-waste, there are also ways for you to deal with E-waste yourself:</p>
                 </section>
                 <section>
                     <div class="card  my-3">
