@@ -18,6 +18,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "incorrect password";
         } else {
             echo "success login";
+            session_start();
+            $_SESSION["username"] = $username; // $user_id is the ID of the logged-in user
         } 
     }
 }
