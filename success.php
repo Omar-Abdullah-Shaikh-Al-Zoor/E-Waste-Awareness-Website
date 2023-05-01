@@ -64,15 +64,15 @@
                 <div class="container-fluid bg-light py-5">
                     <div class="row text-center">
                     <div class="col-md-4">
-                        <img class="worldwide" src="globe.png" alt="WorldWide">
+                        <img class="worldwide" src="media/images/globe.png" alt="WorldWide">
                         <h4 class="mb-3">Over 20+ countries worldwide</h4>
                     </div>
                     <div class="col-md-4">
-                        <img class="worldwide" src="buildings.png" alt="WorldWide">
+                        <img class="worldwide" src="media/images/buildings.png" alt="WorldWide">
                         <h4 class="mb-3">More than 100+ organizations & individuals</h4>
                     </div>
                     <div class="col-md-4">
-                        <img class="worldwide" src="co2.png" alt="WorldWide">
+                        <img class="worldwide" src="media/images/co2.png" alt="WorldWide">
                         <h4 class="mb-3">Reduced CO2 emissions by 50,000+ metric tons</h4>
                     </div>
                     </div>
@@ -81,7 +81,7 @@
                         <div class="row">
                             <div class="col-md-4">
                             <div class="card">
-                                <img class="card-img-top" src="electronic.jpeg" alt="Card image cap">
+                                <img class="card-img-top" src="media/images/electronic.jpeg" alt="Card image cap">
                                 <div class="card-body">
                                 <h5 class="card-title">ABC Corporation</h5>
                                 <p class="card-text">Our organization worked with ABC Corporation, a large electronics manufacturer, to help them responsibly dispose of their e-waste. Over the course of a year, we helped ABC Corporation recycle 500,000 pounds of e-waste, preventing it from ending up in landfills and reducing carbon emissions by over 1,000,000 pounds.</p>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="col-md-4">
                             <div class="card">
-                                <img class="card-img-top" src="school.jpeg" alt="Card image cap">
+                                <img class="card-img-top" src="media/images/school.jpeg" alt="Card image cap">
                                 <div class="card-body">
                                 <h5 class="card-title">XYZ School</h5>
                                 <p class="card-text">We partnered with the XYZ School District to help them recycle their old computers and other electronics. Over the course of a semester, we helped the school district recycle over 2,000 pounds of e-waste, preventing it from ending up in landfills and reducing carbon emissions by over 4,000 pounds.</p>
@@ -101,7 +101,7 @@
                             </div>
                             <div class="col-md-4">
                             <div class="card">
-                                <img class="card-img-top" src="tim.webp" alt="Card image cap">
+                                <img class="card-img-top" src="media/images/tim.webp" alt="Card image cap">
                                 <div class="card-body">
                                 <h5 class="card-title">Tim Smith</h5>
                                 <p class="card-text">Tim Smith, a local resident, had a garage full of old electronics that he wanted to get rid of but didn't know how. Our organization provided John with a free e-waste pickup service and helped him recycle over 500 pounds of electronics, preventing them from ending up in landfills and reducing carbon emissions by over 1,000 pounds.</p>
