@@ -56,12 +56,14 @@
         </div>
         <section class="py-3 pt-4">
           <h2>Basel Action Network (BAN)</h2>
+          <img src="media\images\BAN.png" alt="BAN Logo" width="500" height="500">
           <p>
             BAN is a non-profit organization that aims to prevent the dumping of hazardous waste, including E-waste. They work to promote sustainable, just, and equitable solutions to the global E-waste problem. BAN conducts research, advocates for policy changes, and works with businesses and governments to promote responsible E-waste management practices.
           </p>
         </section>
         <section class="py-3">
           <h2>United Nations University (UNU)</h2>
+          <img src="media\images\UNU.png" alt="United Nations University Logo" width="600" height="550">
           <p>
             UNU is an academic and research institute that focuses on sustainable development. They have a specific
             program called the Sustainable Cycles (SCYCLE) Programme that focuses on E-waste management. The SCYCLE Programme conducts research, provides training and capacity-building, and collaborates with governments and other stakeholders to promote sustainable E-waste management practices.
@@ -70,6 +72,7 @@
         </section>
         <section class="py-3">
           <h2>The International Solid Waste Association (ISWA)</h2>
+          <img src="media\images\ISWA.png" alt="ISWA Logo" width="500" height="500">
           <p>
             ISWA is a global, non-profit organization that focuses on waste management. They have a specific working group called the Task Force on Hazardous Waste, which focuses on E-waste management. The Task Force conducts research, provides technical assistance, and collaborates with governments and other stakeholders to promote sustainable E-waste management practices.
           </p>
@@ -82,6 +85,7 @@
         </section>
         <section class="py-3">
           <h2>The Institute of Scrap Recycling Industries (ISRI)</h2>
+          <img src="media\images\ISRI.jpg" alt="ISRI Logo" width="600" height="600">
           <p>
           ISRI is a trade association for the recycling industry in the United States. They have a specific division called the Electronics Division, which focuses on E-waste management. The Electronics Division works to promote responsible E-waste management practices, provides technical assistance and training, and advocates for policies that promote responsible E-waste management.</p>
         </section>
