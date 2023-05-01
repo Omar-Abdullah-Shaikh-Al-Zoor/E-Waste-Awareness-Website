@@ -51,6 +51,19 @@
     color: red;
   }
 
+/* Organizations Page */
+
+.partner-header{
+    font-family: 'Architects Daughter';
+    
+}
+
+.partner-header > a{
+    text-decoration: none;
+    color: black;
+}
+
+
 /* Simulation Game */
 main#main-game {
     background: #D3CCE3;  /* fallback for old browsers */

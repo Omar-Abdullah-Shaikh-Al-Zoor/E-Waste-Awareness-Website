@@ -10,7 +10,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-    <header>
+      <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light bg-body-tertiary">
           <div class="container-fluid">
               <a class="navbar-brand" href="#">
@@ -51,48 +51,141 @@
               </div>
           </div>
       </nav>
-  </header>
-    <article class="mt-5 container">
-        <h1 class="pb-5">National and International Organizations and Institutes That Deal With E-Waste</h1>
-        <div class="d-flex justify-content-center">
-          <img class="img-fluid img-thumbnail" src="media/images/worker.jpg" alt="Worker in recycling manufacture">
-        </div>
-        <section class="py-3 pt-4">
-          <h2>Basel Action Network (BAN)</h2>
-          <img src="media\images\BAN.png" alt="BAN Logo" width="500" height="500">
-          <p>
-            BAN is a non-profit organization that aims to prevent the dumping of hazardous waste, including E-waste. They work to promote sustainable, just, and equitable solutions to the global E-waste problem. BAN conducts research, advocates for policy changes, and works with businesses and governments to promote responsible E-waste management practices.
-          </p>
-        </section>
-        <section class="py-3">
-          <h2>United Nations University (UNU)</h2>
-          <img src="media\images\UNU.png" alt="United Nations University Logo" width="600" height="550">
-          <p>
-            UNU is an academic and research institute that focuses on sustainable development. They have a specific
-            program called the Sustainable Cycles (SCYCLE) Programme that focuses on E-waste management. The SCYCLE Programme conducts research, provides training and capacity-building, and collaborates with governments and other stakeholders to promote sustainable E-waste management practices.
-          </p>
-      
-        </section>
-        <section class="py-3">
-          <h2>The International Solid Waste Association (ISWA)</h2>
-          <img src="media\images\ISWA.png" alt="ISWA Logo" width="500" height="500">
-          <p>
-            ISWA is a global, non-profit organization that focuses on waste management. They have a specific working group called the Task Force on Hazardous Waste, which focuses on E-waste management. The Task Force conducts research, provides technical assistance, and collaborates with governments and other stakeholders to promote sustainable E-waste management practices.
-          </p>
-        </section>
-        <section class="py-3">
-          <h2>The Electronics TakeBack Coalition</h2>
-          <p>
-            The Electronics TakeBack Coalition is a non-profit organization that focuses on promoting responsible E-waste management practices in the United States. They work to hold manufacturers accountable for the environmental impacts of their products and advocate for policies that promote responsible E-waste management.
-          </p>
-        </section>
-        <section class="py-3">
-          <h2>The Institute of Scrap Recycling Industries (ISRI)</h2>
-          <img src="media\images\ISRI.jpg" alt="ISRI Logo" width="600" height="600">
-          <p>
-          ISRI is a trade association for the recycling industry in the United States. They have a specific division called the Electronics Division, which focuses on E-waste management. The Electronics Division works to promote responsible E-waste management practices, provides technical assistance and training, and advocates for policies that promote responsible E-waste management.</p>
-        </section>
-      </article>
+      </header>
+
+      <section class="container mb-5">
+            <div class="row  px-3 py-5">
+                <h2 class="text-center text-success pb-3">
+                    Our Esteemed Partners...
+                </h2>
+
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                      <div class="d-flex justify-content-center">
+                        <a href="https://www.human-i-t.org/" class="bg-white" target="_blank">
+                          <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+                            <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
+                              <img decoding="async" width="250" height="200" src="humanit.png" alt="" class="float-left"/>
+                            </span>
+                          </button>
+                        </a>
+                      </div>
+                      <h5 class="partner-header">
+                        <a href="https://www.human-i-t.org/" target="_blank">Human-I-T</a>
+                      </h5>
+                      <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-1">More Details</button>
+                      <div id="partner-details-1" class="collapse">
+                        <span class="card card-body">
+                          Human-I-T is a nonprofit and social enterprise that creates equitable access to opportunity by providing devices, internet access, digital skills training, and tech support for communities left on the wrong side of the digital divide, while at the same time, empowering businesses and organizations to do good by diverting technology from landfills to protect our planet.
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="d-flex justify-content-center">
+                        <a href="https://www.itschoolsafrica.org/" class="bg-white" target="_blank">
+                          <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+                            <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
+                              <img decoding="async" width="250" height="200" src="schoolafrica.png" alt="" class="float-left"/>
+                            </span>
+                          </button>
+                        </a>
+                      </div>
+                      <h5 class="partner-header">
+                        <a href="https://www.itschoolsafrica.org/" target="_blank">IT SCHOOLS AFRICA</a>
+                      </h5>
+                      <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-2">More Details</button>
+                      <div id="partner-details-2" class="collapse">
+                        <span class="card card-body">
+                            IT Schools Africa provides e-Learning technology to improve life opportunities for school students and local communities in Africa and the UK. We support SDG 4 quality education, improving digital literacy where we work.
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="d-flex justify-content-center">
+                          <a href="https://comprenew.org" class="bg-white" target="_blank">
+                            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+                              <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
+                                <img decoding="async" width="250" height="200" src="comp.png" alt="" class="float-left"/>
+                              </span>
+                            </button>
+                          </a>
+                        </div>
+                        <h5 class="partner-header">
+                          <a href="https://comprenew.org" target="_blank">Human-I-T</a>
+                        </h5>
+                        <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-3">More Details</button>
+                        <div id="partner-details-3" class="collapse">
+                          <span class="card card-body">
+                            Comprenew strives to protect businesses, people and the environment from the threat of improperly disposed electronic devices through best practice technology data management, asset recovery and recycling services, while fostering job readiness and computer literacy among at-risk populations in our community.
+                          </span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4 text-center">
+                          <div class="d-flex justify-content-center">
+                            <a href="https://www.compudopt.org" class="bg-white" target="_blank">
+                              <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+                                <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
+                                  <img decoding="async" width="250" height="200" src="compudot.png" alt="" class="float-left"/>
+                                </span>
+                              </button>
+                            </a>
+                          </div>
+                          <h5 class="partner-header">
+                            <a href="https://www.compudopt.org" target="_blank">Compudopt</a>
+                          </h5>
+                          <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-4">More Details</button>
+                          <div id="partner-details-4" class="collapse">
+                            <span class="card card-body">
+                                Compudopt was founded in 2007 by Jonathan Osha, with the belief that every child deserves equal access to education and opportunity. He realized that the life cycle of a computer in a corporate environment is typically less than three years. Usually sent to landfill or shelved, these lightly used tools can become a dream come true for a young learner ready to broaden their skills and knowledge, as well as an opportunity to demonstrate good environmental stewardship by our partner organizations. 
+                            </span>
+                          </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="d-flex justify-content-center">
+                              <a href="https://www.computeraid.org/" class="bg-white" target="_blank">
+                                <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+                                  <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
+                                    <img decoding="async" width="250" height="200" src="compaid.png" alt="" class="float-left"/>
+                                  </span>
+                                </button>
+                              </a>
+                            </div>
+                            <h5 class="partner-header">
+                              <a href="https://www.computeraid.org/" target="_blank">ComputerAid</a>
+                            </h5>
+                            <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-5">More Details</button>
+                            <div id="partner-details-5" class="collapse">
+                              <span class="card card-body">
+                                We use computers and other ICT equipment to improve lives by enhancing educational experiences. We receive donations of computers, tablets and mobile telephones from individuals, companies, schools, universities and government agencies. These are then data-wiped, professionally refurbished and used in our projects to help bridge the digital divide.
+                              </span>
+                            </div>
+                          </div>
+                          <div class="col-md-4 text-center">
+                            <div class="d-flex justify-content-center">
+                              <a href="https://rrrcomputer.org" class="bg-white" target="_blank">
+                                <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+                                  <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
+                                    <img decoding="async" width="250" height="200" src="rrr.png" alt="" class="float-left"/>
+                                  </span>
+                                </button>
+                              </a>
+                            </div>
+                            <h5 class="partner-header">
+                              <a href="https://rrrcomputer.org" target="_blank">RRR Computer</a>
+                            </h5>
+                            <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-6">More Details</button>
+                            <div id="partner-details-6" class="collapse">
+                              <span class="card card-body">
+                                Our Mission Is To Facilitate School Laptop Donations & Promote digital inclusion by repurposing computing devices for the next generation. We encourage corporations to donate rather than recycle their laptop computers. We then refurbish the laptop computers to give to low-income K-12 kids for education.
+                              </span>
+                            </div>
+                          </div>
+                    
+                  </div>
+                 
+
+      </section>
       <footer class="bg-light text-center text-lg-start">
         <div class="container p-4">
             <div class="row mx-5">
@@ -128,5 +221,5 @@
             </div>
         </div>
     </footer>
-    </body>
+  </body>
 </html>
