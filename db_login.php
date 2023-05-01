@@ -3,8 +3,8 @@ require_once('DAL.php');
 $dbObj = new DAL();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['username_login'];
+    $password = $_POST['password_login'];
 
     $sql = "SELECT * FROM users WHERE username = ?";
     $params = [$username];

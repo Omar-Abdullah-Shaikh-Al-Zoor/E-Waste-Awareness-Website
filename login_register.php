@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <style>
     html,
     body {
@@ -45,7 +47,6 @@
         border-radius: 8px;
         padding: 8px 12px;
         width: 100%;
-        margin-bottom: 1rem;
         font-size: 1rem;
     }
 
@@ -68,27 +69,62 @@
     .text-secondary {
         color: #6c757d;
     }
+label {
+    margin-bottom: .5rem;
+    text-align: left;
+    display: block;
+    letter-spacing: 2px;
+    color: #adb5bd;
+}
 
-    .password-container {
-        position: relative;
-    }
+.form-control {
+    border: none;
+    background: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    transition: border-color .4s ease-out;
+    border-radius: 0;
+}
 
-    .password-container input[type="password"],
-    .password-container input[type="text"] {
-        width: 100%;
-        padding: 12px 36px 12px 12px;
-        box-sizing: border-box;
-    }
+.form-control:active,
+.form-control:focus,
+.btn.focus,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: black;
+}
 
-    .password-container .fa-eye {
-        position: absolute;
-        top: 28%;
-        right: 4%;
-        cursor: pointer;
-        color: rgb(73, 71, 71);
-    }
-    </style>
+.form-control.valid {
+    border-color: green;
+}
 
+.form-control.invalid {
+    border-color: red;
+}
+
+.form-control + small {
+    color: red;
+    opacity: 0;
+    height: 0;
+    transition: opacity .4s ease-out;
+}
+
+.form-control.invalid + small {
+    opacity: 1;
+    height: auto;
+    margin-bottom: 1.2rem;
+    transition: opacity .4s ease-out;
+}
+
+.btn:hover {
+    color: white;
+    background: black;
+    transition: all .4s ease-out;
+}
+
+
+
+</style>
 </head>
 
 <body>
@@ -96,30 +132,30 @@
         <div class="card container shadow text-secondary">
             <div class="card-item">
                 <div class="card-header">
-                    <h1 class="text-secondary center" id="title">Log-in to your account</h1>
+                    <h1 class="text-secondary text-center" id="title">Log-in to your account</h1>
                 </div>
                 <div class="card-body log-in" id="CardBody">
-                    <form id="login-form">
+                <form id="login-form">
                         <div class="d-flex justify-content-center mb-5 ">
-                            <label for="username" class="w-50">
+                            <label for="username_login" class="w-50">
                                 <p class="fs-5">Enter your username:</p>
-                                <input id="username" name="username" class="form-control"
+                                <input id="username_login" name="username_login" class="form-control"
                                     placeholder="username or email" required>
                             </label>
                         </div>
                         <div class="d-flex justify-content-center mb-3">
-                            <label for="password" class="w-50">
+                            <label for="password_login" class="w-50">
                             <p class="fs-5">Enter your password</p>
-                                <div class="password-container">
-                                    <input id="password" name="password" class="form-control password-input"
-                                        placeholder="Password" type="password" required>
-                                    <i class="fa-solid fa-eye toggle-password"></i>
+                                <div class="order-1 input-group d-flex flex-nowrap">
+                                    <input id="password_login" name="password_login" class="form-control password-input flex-grow-1"
+                                    placeholder="Enter your password" type="password" required>
+                                    <span class="input-group-text h-75" style="z-index: 100;">
+                                        <i class="fa fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                                    </span>
                                 </div>
                             </label><br />
                         </div>
-                        <div id="login-message">
-
-                        </div>
+                        <div id="login-message" class="text-center"></div>
                         <div class="center d-flex justify-content-center mt-5">
                             <button class="btn btn-success w-25 mx-3" type="submit">Log In</button>
                             <button class="btn btn-primary w-25 mx-3" type="button" onclick="ShowSignIn()">Sign
@@ -132,43 +168,90 @@
     </main>
 </body>
 
+
 <script>
     $(document).ready(function() {
+    $("#username, #email").keyup(function() {
+        let formData = new FormData();
+        formData.append('username', $('#username').val());
+        formData.append('email', $('#email').val());
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function() {
+            if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                let response = xmlhttp.responseText;
+                if(response === "username already exists" ) {
+                    $("#usernameExistsMsg").prop("hidden", false);
+                    $("#usernameMsg").prop("hidden", true);
+                }
+                else if (response === "Email already used") {
+                    $("#emailExistsMsg").prop("hidden", false);
+                    $("#emailMsg").prop("hidden", true);
+                }
+                else if (response === "username and email are already in use") {
+                    $("#usernameExistsMsg").prop("hidden", false);
+                    $("#emailExistsMsg").prop("hidden", false);
+                    $("#usernameMsg").prop("hidden", true);
+                    $("#emailMsg").prop("hidden", true);
+                }
+                else {
+                    $("#usernameExistsMsg").prop("hidden", true);
+                    $("#emailExistsMsg").prop("hidden", true);
+                    $("#usernameMsg").prop("hidden", false);
+                    $("#emailMsg").prop("hidden", false);
+                }
+            }
+        };
+        xmlhttp.open("POST", "check_email_username.php", true);
+        xmlhttp.send(formData);   
+    });
     (function() {
         'use strict';
         function ajax_post(event) {
             event.preventDefault();
             if ($("#CardBody").hasClass("log-in")) {
-                // Send an AJAX request to the server
-                var xmlhttp = new XMLHttpRequest();
+                let xmlhttp = new XMLHttpRequest();
                 xmlhttp.onload = function() {
                     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-                        var response = xmlhttp.responseText;
+                        let response = xmlhttp.responseText;
                         if (response === "username not found") {
-                        $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-danger text-center'>username not found</span></div>")
+                            $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-danger text-center'>username not found</span></div>");
+                            $("#login-message").show();
+                            setTimeout(function() {
+                                $("#login-message").hide();
+                            }, 3000);
                         } else if (response === "incorrect password") {
-                        $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-danger text-center'>Incorrect password</span></div>")
+                            $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-danger text-center'>Incorrect password</span></div>");
+                            $("#login-message").show();
+                            setTimeout(function() {
+                                $("#login-message").hide();
+                            }, 3000);
                         } else if (response === "success login") {
-                        $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-success text-center'>Login successful</span></div>")
+                            $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-success text-center'>Login successful</span></div>");
+                            $("#login-message").show();
+                            setTimeout(function() {
+                                $("#login-message").hide();
+                            }, 3000);
                         }
                     }
                 };
                 xmlhttp.open("POST", "db_login.php", true);
                 xmlhttp.send(new FormData(event.target));
-            } else if ($("#CardBody").hasClass("sign-up")) {
+            } 
+            else if ($("#CardBody").hasClass("sign-up")) {
                 // Send an AJAX request to the server
-                var xmlhttp = new XMLHttpRequest();
+                let xmlhttp = new XMLHttpRequest();
                 xmlhttp.onload = function() {
                     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-                        var response = xmlhttp.responseText;
+                        let response = xmlhttp.responseText;
                         if (response === "success") {
-                            $("#sign-message").html("<span class='text-success'>sign up successful</span>")
+                            $("#signup-message").html("<span class='fs-5 text-success fw-bold'>Successfully Created your Account</span>")
+                            $("input").val("");
                         } else if (response === "failed") {
-                            $("#sign-message").html("<span class='text-danger'>sign up failed</span>")
+                            $("#signup-message").html("<span class='fs-5 text-danger fw-bold'>Sign-up failed. Could not create your account</span>")
                         }
                     }
                 };
-                xmlhttp.open("POST", "db_login.php", true);
+                xmlhttp.open("POST", "db_register.php", true);
                 xmlhttp.send(new FormData(event.target));
             }
         }
@@ -178,206 +261,209 @@
             event.preventDefault();
             ajax_post(event);
         });
-        Array.from(forms).forEach(function(form) {
-            form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Add this line to prevent form submission
-            if (!form.checkValidity()) {
-                event.stopPropagation();
-            }
-            ajax_post(event);
-            form.classList.add('was-validated');
-        }, false);
-        });
-        function validateInputs(event) {
-            const usernameInput = document.getElementById('username');
-            const fnameInput = document.getElementById('fname');
-            const lnameInput = document.getElementById('lname');
-            const emailInput = document.getElementById('email');
-            const passwordInput = document.getElementById('password');
-            const password2Input = document.getElementById('password2');
-
-            const usernameRegex = /^[a-zA-Z0-9_]{5,}$/;
-            const nameRegex = /^[a-zA-Z\s']+$/;
-            const emailRegex = /^\S+@\S+\.\S+$/;
-            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
-
-
+        $("#signup-form").submit(function(event) {
+            event.preventDefault();
             let isValid = true;
-
-            if (!usernameRegex.test(usernameInput.value.trim())) {
-                usernameInput.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                usernameInput.classList.remove('is-invalid');
+            inputs.forEach(input => {
+                if(input.id !== "confirm_password" && input.type !== "checkbox") {                
+                    if (!validate(input, patterns[input.attributes.id.value])) {
+                        isValid = false;
+                        $("#signup-message").html("<span class='fs-5 text-danger fw-bold'>You must meet inputs requirements</span>");
+                    }
+                }
+            });
+            if (isValid) {
+                ajax_post(event);
+                console.log("hi5");
             }
-
-            if (!nameRegex.test(fnameInput.value.trim())) {
-                fnameInput.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                fnameInput.classList.remove('is-invalid');
-            }
-
-            if (!nameRegex.test(lnameInput.value.trim())) {
-                lnameInput.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                lnameInput.classList.remove('is-invalid');
-            }
-
-            if (!emailRegex.test(emailInput.value.trim())) {
-                emailInput.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                emailInput.classList.remove('is-invalid');
-            }
-
-            if (!passwordRegex.test(passwordInput.value)) {
-                passwordInput.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                passwordInput.classList.remove('is-invalid');
-            }
-
-            if (password2Input.value !== passwordInput.value) {
-                password2Input.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                password2Input.classList.remove('is-invalid');
-            }
-
-            if (!isValid) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-        }})()});
-</script>
-
-
-<script>
-function ShowLogIn() {
-    current = $("#CardBody");
-    if (current.classList.contains("sign-in")) {
-        current.innerHTML = `
-        <form id="login-form">
+        });
+            })()
+            });
+    function ShowLogIn() {
+        current = document.querySelector("#CardBody");
+        if (current.classList.contains("sign-up")) {
+            current.innerHTML = `
+            <form id="login-form">
                         <div class="d-flex justify-content-center mb-5 ">
-                            <label for="username-email" class="w-50">
-                                <p class="fs-5">Enter your username or email:</p>
-                                <input id="username-email" name="username-email" class="form-control"
-                                    placeholder="username or email">
+                            <label for="username" class="w-50">
+                                <p class="fs-5">Enter your username:</p>
+                                <input id="username" name="username" class="form-control"
+                                    placeholder="username or email" required>
                             </label>
                         </div>
                         <div class="d-flex justify-content-center mb-3">
                             <label for="password" class="w-50">
-                                <p class="fs-5">Enter your password:</p>
-                                <input id="password" name="password" class="form-control" placeholder="password">
+                            <p class="fs-5">Enter your password</p>
+                                <div class="password-container">
+                                    <input id="password" name="password" class="form-control password-input" placeholder="Password" type="password" required>
+                                    <span class="input-group-text h-75" style="z-index: 100;">
+                                        <i class="fa fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                                    </span>
+                                </div>
                             </label><br />
                         </div>
+                        <div id="login-message" class="text-center"></div>
                         <div class="center d-flex justify-content-center mt-5">
                             <button class="btn btn-success w-25 mx-3" type="submit">Log In</button>
                             <button class="btn btn-primary w-25 mx-3" type="button" onclick="ShowSignIn()">Sign
                                 Up</button>
                         </div>
                     </form>`;
-        $("#title").text("Log in to your account")
+            $("#title").text("Log in to your account")
 
-        current.classList.replace("sign-in", "log-in");
+            current.classList.replace("sign-up", "log-in");
+        }
     }
-}
 
-function ShowSignIn() {
-    current = $("#CardBody");
-    if (current.classList.contains("log-in")) {
-        current.innerHTML =
-            `<form id="signup-form" class="row g-3 needs-validation" novalidate action="credentials.php"
-                        method="post">
-                        <div class="ms-5 d-flex">
-                            <label for="fname" class="flex-fill">
-                                <p class="fs-5">Enter your first name</p>
-                                <input type="text" id="fname" name="fname" class="form-control" placeholder="First name"
-                                    required>
-                                <div class="invalid-feedback">
-                                    *First name should only contain alphabetic characters, spaces, and apostrophes
-                                </div>
-                            </label>
-                            <label for="lname" class="mx-4 flex-fill">
-                                <p class="fs-5">Enter your last name</p>
-                                <input type="text" id="lname" name="lname" class="form-control" placeholder="Last name"
-                                    required>
-                                <div class="invalid-feedback">
-                                    *Last name should only contain alphabetic characters, spaces, and apostrophes
-                                </div>
-                            </label>
-                        </div>
-                        <div class="ms-5 d-flex my-3">
-                            <label for="username" class="flex-fill">
-                                <p class="fs-5">Enter your username</p>
-                                <input type="text" id="username" name="username" class="form-control"
-                                    placeholder="Username" required>
-                                <div class="invalid-feedback" id="usernameFeedback" style="display: none;">
-                                    *Username length should be at least 5 and it must not contain spaces. Only
-                                    underscores, alphabetic and numerical values are allowed
-                                </div>
-                            </label>
-                            <label for="email" class="mx-4 flex-fill">
-                                <p class="fs-5">Enter your email address</p>
-                                <input type="email" id="email" name="email" class="form-control"
-                                    placeholder="email@gmail.com" required>
-                                <div class="invalid-feedback" id="emailFeedback" style="display: none;">
-                                    *Email should be in the format: example@domain.com
-                                </div>
-                            </label>
-                        </div>
-                        <div class="ms-5 d-flex">
-                            <label for="password" class="flex-fill">
-                                <p class="fs-5">Enter your password</p>
-                                <div class="password-container">
-                                    <input id="password" name="password" class="form-control password-input"
-                                        placeholder="Password" type="password" required>
-                                    <i class="fa-solid fa-eye toggle-password"></i>
-                                </div>
-                                <div class="invalid-feedback">
-                                    *Password length should be at least 5 and it must contains alphabetic and numerical
-                                    values
-                                </div>
-                            </label>
-                            <label for="repeat-password" class="mx-4 flex-fill">
-                                <p class="fs-5">Confirm your password</p>
-                                <div class="password-container">
-                                    <input id="repeat-password" name="repeat-password" class="form-control password-input"
-                                        placeholder="Confirm password" type="password" required>
-                                    <i class="fa-solid fa-eye toggle-password"></i>
-                                </div>
-                                <div class="invalid-feedback">
-                                    *Password length should be at least 5 and it must contains alphabetic and numerical
-                                    values
-                                </div>
-                            </label>
-                        </div>
-                        <div>
-                            <div class="form-check ms-5 my-3">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                <label class="form-check-label" for="invalidCheck">
-                                    Agree to terms and conditions
+    function ShowSignIn() {
+        current = document.querySelector("#CardBody");
+        if (current.classList.contains("log-in")) {
+            current.innerHTML =
+                `<form id="signup-form" class="row g-3 needs-validation h-75 w-100">
+                            <div class="ms-5 d-flex">
+                                <label for="fname" class="flex-fill">
+                                    <p class="fs-5">Enter your First Name</p>
+                                    <input type="text" id="fname" name="fname" class="form-control" placeholder="First name"
+                                        required>
+                                    <small id="lnameMsg" class="form-text">
+                                        *First Name accepts characters, spaces, and (') only
+                                    </small>
                                 </label>
-                                <div class="invalid-feedback">
-                                    You must agree before submitting.
+                                <label for="lname" class="mx-4 flex-fill">
+                                    <p class="fs-5">Enter your Last Name</p>
+                                    <input type="text" id="lname" name="lname" class="form-control" placeholder="Last name"
+                                        required>
+                                    <small id="lnameMsg" class="form-text">
+                                        *Last Name accepts characters, spaces, and (') only
+                                    </small>
+                                </label>
+                            </div>
+                            <div class="ms-5 d-flex my-2">
+                                <label for="username" class="w-50">
+                                    <p class="fs-5">Enter your username</p>
+                                    <input type="text" id="username" name="username" class="form-control"
+                                        placeholder="Username" required>                             
+                                    <small id="usernameMsg" class="form-text">
+                                        *Username must be between 5 - 12 characters. Only
+                                        characters, numbers (@, _ and - are allowed)
+                                    </small>
+                                    <div id="usernameExistsMsg" class="text-danger" hidden><br/>username already taken</div>
+                                </label>
+                                <label for="email" class="mx-4 w-50">
+                                    <p class="fs-5">Enter your email address</p>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="email@gmail.com" required>
+                                    <small id="repeated_passwordMsg" class="form-text">
+                                        <div id="emailExistsMsg" hidden>Email already taken<br/></div>
+                                        *Email should be in the format: example@domain.com
+                                    </small>
+                                </label>
+                            </div>
+                            <div class="ms-5 mt-0 d-flex">
+                            <label for="password" class="w-50">
+                                <p class="fs-5">Enter your password</p>
+                                <div class="password-container d-flex flex-wrap">
+                                    <small id="passwordMsg" class="form-text order-2 me-2" style="color: red; display: none;">
+                                        *Password must be alphanumeric, 8 - 20 characters (@, _ and - are allowed).
+                                    </small>
+                                    <div class="order-1 input-group d-flex flex-nowrap">
+                                    <input id="password" name="password" class="form-control password-input" placeholder="Password" type="password" required>
+                                    <span class="input-group-text h-75" style="z-index: 100;">
+                                        <i class="fa fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                                    </span>
+                                    </div>
+                                </div>
+                                </label>
+                                <label for="confirm_password" class="mx-4 w-50">
+                                    <p class="fs-5">Confirm your password</p>
+                                    <div class="password-container d-flex flex-wrap">
+                                            <small id="confirmPasswordMsg" class="form-text order-3 me-2" style="color: red; display: none;">
+                                                *Passwords do not match
+                                            </small>
+                                            <div class="order-1 input-group d-flex flex-nowrap">
+                                                <input id="confirm_password" name="confirm-password" class="form-control password-input flex-grow-1"
+                                                placeholder="Confirm Password" type="password" required>
+                                                <span class="input-group-text h-75" style="z-index: 100;">
+                                                    <i class="fa fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                                                </span>
+                                            </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div>
+                                <div class="form-check ms-5 my-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                        Agree to terms and conditions
+                                    </label>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-flex justify-content-center mt-4">
-                            <button class="btn btn-success w-25 mx-3" type="button" onclick="ShowLogIn()">Log
-                                In</button>
-                            <button class="btn btn-primary w-25 mx-3" type="submit" id="submit-button">Sign Up</button>
-                        </div>
+                            <div id="signup-message" class="text-center"></div>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button class="btn btn-success w-25 mx-3" type="button" onclick="ShowLogIn()">Log
+                                    In</button>
+                                <button class="btn btn-primary w-25 mx-3" type="submit">Sign Up</button>
+                            </div>
                     </form>`;
-        $("#title").text("Sign up a new account")
-        current.classList.replace("log-in", "sign-in");
+            $("#title").text("Sign up an account")
+            current.classList.replace("log-in", "sign-up");
 
+        }
     }
-}
 </script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    const inputs = document.querySelectorAll('input');
+
+    const patterns = {
+        username: /^[a-zA-Z0-9_]{5,}$/,
+        fname: /^[a-zA-Z\s']+$/,
+        lname: /^[a-zA-Z\s']+$/,
+        email: /^\S+@\S+\.\S+$/,
+        password: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,20}$/,
+    }
+
+    inputs.forEach(input => {
+    input.addEventListener('keyup', e => {
+        validate(e.target, patterns[e.target.attributes.id.value]);
+    });
+    });
+
+    function validate(field, regex) {
+    let isValid = true;
+    if (field.id !== "confirm_password") {
+        if (regex.test(field.value)) {
+            field.className = 'form-control valid';
+        if (field.id === "password") {
+            document.getElementById("passwordMsg").style.display = "none";
+        }
+        } else {
+            field.className = 'form-control invalid';
+            if (field.id === "password") {
+                document.getElementById("passwordMsg").style.display = "block";
+            }
+        isValid = false;
+        }
+    }
+    if (field.id === "confirm_password") {
+        if (field.value !== document.querySelector("#password").value) {
+            field.className = 'form-control invalid';
+            document.getElementById("confirmPasswordMsg").style.display = "block";
+            isValid = false;
+        } else {
+            field.className = 'form-control valid';
+            document.getElementById("confirmPasswordMsg").style.display = "none";
+        }
+    }
+    if (field.value === "") {
+        field.className = 'form-control valid';
+        if (field.id === "password") {
+            document.getElementById("passwordMsg").style.display = "none";
+        }
+    }
+    return isValid;
+    }
+    </script>
+
 
 <script>
 const passwordInputs = document.querySelectorAll(".password-input");
@@ -391,6 +477,25 @@ togglePasswordButtons.forEach(function(button) {
         this.classList.toggle("fa-eye-slash");
     });
 });
+</script>
+<script>
+    function togglePassword(passwordEl, toggleEl) {
+        toggleEl.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = passwordEl.getAttribute("type") === "password" ? "text" : "password";
+            passwordEl.setAttribute("type", type);
+            // toggle the eye icon
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    }
+
+    const passwords = document.querySelectorAll("input[type='password']");
+    const toggles = document.querySelectorAll(".fa-eye");
+
+    for (let i = 0; i < passwords.length; i++) {
+        togglePassword(passwords[i], toggles[i]);
+    }
 </script>
 
 </html>
