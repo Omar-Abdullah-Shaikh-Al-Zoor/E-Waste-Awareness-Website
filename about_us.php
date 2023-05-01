@@ -62,7 +62,7 @@
                                     About Us
                                 </h2>
                                 <p class="lead">
-                                We are a dedicated team passionate about creating positive change. With diverse backgrounds and expertise, we collaborate to find innovative solutions to society's pressing issues. Together, we strive towards a sustainable and equitable future for all.</p>
+                                We are a dedicated team passionate about creating positive change. With diverse backgrounds and expertise, we collaborate to find innovative solutions to society's pressing issues. We have a deep understanding of sustainable practices and are always seeking to learn more about how we can reduce their environmental impact.<br/><br/> In a world where resources are finite and the environment is increasingly under threat, it is more important than ever that we strive towards a sustainable and equitable future for ourselves and future generations.</p>
                                 <img class="" src="media/images/about_us.jpg" alt="Better World" style="max-width: 100%; height: 40%;">
                             </div> 
                         </div>
