@@ -1,4 +1,12 @@
+let username = '<?php echo isset($_SESSION["username"]) ? $_SESSION["username"] : "" ?>';
+console.log(username);
 $(document).ready(function(){
+    if (username === "") {
+        setTimeout(function() {
+            window.location.href = "./index.php";
+        }, 7000);
+    }
+    
     $('#InfoModal').modal('show', {backdrop: 'static'});
     $("#start-game").click(gameStart);
     $("#start-game").click(price_updated);
@@ -7,16 +15,19 @@ $(document).ready(function(){
     $("#restart-game").click(price_updated);
     $("#purchase").click( function () {
         if (price <= 3000) {
+            clearInterval(intervalID);
             stop = 1;
             $("#Win-lose-Modal p").text("You won the game");
             $("#Win-lose-Modal p").css({"color":"green"});
             $("#Win-lose-Modal").modal('show', {backdrop: 'static'});
+            sendResults();
         }
     });
 });
 stop = 0;
 counter = 0;
-const IMG_ARR =["../media/images/broken_keyboard.png","../media/images/atari_console.png", "../media/images/broken_samsung.png", "../media/images/broken_smartphone.png", "../media/images/camera.png", "../media/images/gameboy_console.png", "../media/images/headphone.png", "../media/images/ps2_console.png", "../media/images/broken_iphone6.png", "../media/images/broken_phonemini.png", "../media/images/broken_tv.png", "../media/images/old_tv.png", "../media/images/broken_videotape.png", "../media/images/broken_iphone.png", "../media/images/broken_printer.png"]
+recycling_items = 0;
+const IMG_ARR =["../media/images/broken_keyboard.png","../media/images/atari_console.png", "../media/images/broken_samsung.png", "../media/images/broken_smartphone.png", "../media/images/camera.png", "../media/images/gameboy_console.png", "../media/images/headphone.png", "../media/images/ps2_console.png", "../media/images/broken_iphone6.png", "./media/images/broken_phonemini.png", "../media/images/broken_tv.png", "../media/images/old_tv.png", "../media/images/broken_videotape.png", "../media/images/broken_iphone.png", "../media/images/broken_printer.png"]
 price = parseInt($("#price span").text());
 
 function getRndInteger(min, max) {
@@ -60,7 +71,8 @@ function create_img(eWaste_div, drop_div) {
     img.setAttribute("ondragstart", "drag(event)");
     const pos = getRndPosition(eWaste_div);
     img.style.left = (pos.left / window.innerWidth) * 100 + "vw";
-    img.style.top = pos.top + "px";
+    pos.top -= 100;
+    img.style.top = pos.top + "vh";
     return img;
 }
     
@@ -90,6 +102,7 @@ function price_updated() {
 }
 
 function lose_game() {
+    clearInterval(intervalID);
     stop = 1;
     $("#Win-lose-Modal p").text("Good luck Next time");
     $("#Win-lose-Modal p").css({"color":"red"});
@@ -109,10 +122,26 @@ function drop(event) {
     var data = event.dataTransfer.getData("DragDrop");
     var data_element = document.getElementById(data);
     data_element.remove();
+    recycling_items ++;
     price -= 150;
     $("#price span").text(price); 
 }
 
+function sendResults() {
+    let formData = new FormData();
+    formData.append('username', username);
+    formData.append('recycling_items', recycling_items);
+    formData.append('price', price);
+    formData.append('timer', $('#timer').val());
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.load = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        }
+    }
+    xmlhttp.open("POST", "database_DPO/gameResults.php", true);
+    xmlhttp.send(formData);
+}
 
 
 

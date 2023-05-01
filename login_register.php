@@ -201,7 +201,7 @@ label {
                 }
             }
         };
-        xmlhttp.open("POST", "check_email_username.php", true);
+        xmlhttp.open("POST", "database_DPO/check_email_username.php", true);
         xmlhttp.send(formData);   
     });
     (function() {
@@ -218,23 +218,26 @@ label {
                             $("#login-message").show();
                             setTimeout(function() {
                                 $("#login-message").hide();
-                            }, 3000);
+                            }, 2500);
                         } else if (response === "incorrect password") {
                             $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-danger text-center'>Incorrect password</span></div>");
                             $("#login-message").show();
                             setTimeout(function() {
                                 $("#login-message").hide();
-                            }, 3000);
+                            }, 2500);
                         } else if (response === "success login") {
-                            $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-success text-center'>Login successful</span></div>");
+                            $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-success text-center'>successful Login</span></div>");
                             $("#login-message").show();
                             setTimeout(function() {
                                 $("#login-message").hide();
                             }, 3000);
+                            setTimeout(function() {
+                                window.location.href = "./index.php";
+                            }, 2000);
                         }
                     }
                 };
-                xmlhttp.open("POST", "db_login.php", true);
+                xmlhttp.open("POST", "database_DPO/db_login.php", true);
                 xmlhttp.send(new FormData(event.target));
             } 
             else if ($("#CardBody").hasClass("sign-up")) {
@@ -251,7 +254,7 @@ label {
                         }
                     }
                 };
-                xmlhttp.open("POST", "db_register.php", true);
+                xmlhttp.open("POST", "database_DPO/db_register.php", true);
                 xmlhttp.send(new FormData(event.target));
             }
         }
@@ -268,7 +271,9 @@ label {
                 if(input.id !== "confirm_password" && input.type !== "checkbox") {                
                     if (!validate(input, patterns[input.attributes.id.value])) {
                         isValid = false;
-                        $("#signup-message").html("<span class='fs-5 text-danger fw-bold'>You must meet inputs requirements</span>");
+                        setTimeout(function() {
+                            $("#signup-message").html("<span class='fs-5 text-danger fw-bold'>You must meet inputs requirements</span>");
+                        }, 2000);
                     }
                 }
             });

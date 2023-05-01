@@ -26,6 +26,9 @@
     font-size: 14px;
     text-align: right;
 }
+.no_wrap {
+    white-space: nowrap;
+}
 
 
 /* Success Page */
@@ -50,6 +53,19 @@
     font-weight: bold;
     color: red;
   }
+
+/* Organizations Page */
+
+.partner-header{
+    font-family: 'Architects Daughter';
+    
+}
+
+.partner-header > a{
+    text-decoration: none;
+    color: black;
+}
+
 
 /* Simulation Game */
 main#main-game {
@@ -88,7 +104,7 @@ main#main-game {
 }
 
 .padding-ul > li{
-    padding:0 3vw 0 3vw;
+    padding:0 1vw 0 1vw;
 }
 
 .navbar-brand {

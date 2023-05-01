@@ -37,7 +37,8 @@
             </div>
         </article>
         <main id="main-game">
-            <article class=" container-fluid row">
+            <article class="container-fluid row">
+                <div class="pt-3 ps-3 fs-5 text-primary">Time Taken: <br/><div id="timer" style="position: sticky; top:0; left:0;">00:00:00</div></div>
                 <section class="URM col d-flex align-items-center justify-content-center">
                     <img class="URM-img img-fluid ms-4" src="media/images/recycle-machine.jpg">
                 </section>
@@ -53,6 +54,7 @@
                 </section>
             </article>
         </main>
+        <div id="login-message"></div>
         <article>
             <div class="modal fade" id="Win-lose-Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
@@ -64,13 +66,20 @@
                             <p></p>
                         </div>
                         <div class="modal-footer">
-                            <a href="index.html" class="text-white text-decoration-none"><button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="leave-game">Back to Home Screen</button></a>
-                            <a class="text-white text-decoration-none"><button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="restart-game">Play the Game Again</button></a>
+                            <a href="index.html" class="text-white text-decoration-none">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="leave-game">Back to Home Screen</button>
+                            </a>
+                            <a class="text-white text-decoration-none">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="restart-game">Play the Game Again</button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </article>
         <script src="scripts/jQuery_script.js"></script>
+        <script src="scripts/timer.js">
+        </script>
+        <script></script>
     </body>
 </html>
