@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             </tr>";
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             echo "<tr>";
-            echo "<td>" . $row['game_id '] . "</td>";
+            echo "<td>" . $row['game_id'] . "</td>";
             echo "<td>" . $row['username'] . "</td>";
             echo "<td>" . $row['recycling_score'] . "</td>";
             echo "<td>" . $row['price_purchased'] . "</td>";

@@ -66,7 +66,7 @@
             <section class="text-center">
                 <img src="./media/images/Podium.png" alt="Podium" height="400px">            
             </section>
-            <section class="container mt-5 shadow-lg" id="LeaderBoard-table">
+            <section class="container my-5 shadow-lg d-flex justify-content-center fs-4" id="LeaderBoard-table">
                 
             </section>
         </article>

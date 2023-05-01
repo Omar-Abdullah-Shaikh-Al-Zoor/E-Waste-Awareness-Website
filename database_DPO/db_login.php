@@ -2,6 +2,8 @@
 require_once('DAL.php');
 $dbObj = new DAL();
 
+session_start();
+
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username_login'];
     $password = $_POST['password_login'];
@@ -17,9 +19,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($row['password'] !== $password) {
             echo "incorrect password";
         } else {
+            $_SESSION["username"] = $username;
             echo "success login";
-            session_start();
-            $_SESSION["username"] = $username; // $user_id is the ID of the logged-in user
         } 
     }
 }

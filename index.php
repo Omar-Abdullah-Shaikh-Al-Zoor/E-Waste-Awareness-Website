@@ -39,7 +39,9 @@
                         <li class="nav-item">
                             <a class="nav-link font-weight-bold rounded-2 fs-5 " href="organizations.php">IEMN</a>
                         </li>
-                        
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold rounded-2 fs-5 " href="leaderboard.php">Leaderboard</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="donation.php">Donate Now</a>
                         </li>
