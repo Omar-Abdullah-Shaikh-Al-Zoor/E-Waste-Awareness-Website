@@ -1,7 +1,7 @@
 <?php 
 require_once('DAL.php');
 $dbObj = new DAL();
-if ([$_SERVER['REQUEST_METHOD'] === 'GET']) {
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     $sql = "SELECT * FROM gamers ORDER BY recycling_score DESC";
     $params = [];
