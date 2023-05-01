@@ -67,6 +67,13 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text ms-4">As mentioned before, E-waste contains toxic chemicals that are dangerous for people and the environment. For example, burning electronics can result in the release of dangerous fumes, which pollutes the air and causes detrimental health issues for people who inhale it. Instead of relying on such methods, people could rely on a more environmentally friendly method to dispose of electronics that have reached the end of their life cycle, like sending them to a designated e-waste recycling facility that recycles e-waste and recovers precious metal such as gold, silver, copper, etc.</p>
+                            <br>
+                            <p>(E-Waste & Its Negative Effects on the Environment | Elytus, n.d.)</p>
+                            <p>E-Waste & its Negative Effects on the Environment | Elytus. (n.d.).
+                                <br> https://elytus.com/blog/e-waste-and-its-negative-effects-on-the-environment.html</p>
+                            <br>
+
+                            <p>If you wonder how facilities recycle E-waste, then here's how:</p>
                             <ul class="list-group ms-4 mb-3">
                                 <li class="list-group-item">Collect e-waste: The first step is to collect e-waste from households, businesses, and organizations. This can be done through e-waste recycling drives or by partnering with e-waste recycling companies.</li>
                                 <li class="list-group-item">Sort and segregate: The collected e-waste needs to be sorted and segregated into different categories based on the type of material and the level of hazard.</li>
@@ -114,6 +121,10 @@
 
                                 <p>Countries covered by electronic waste legislation, policy, and regulation from 2014 to 2019: </p>
                                 <img src="media\images\Government E-waste Regulation.png" alt="Statistics of countries enforcing E-waste regulations and policies">
+                                <br>
+                                <p>(Statista, 2023)</p>
+                                <br>
+                                <p>Statista. (2023, February 6). Countries covered by e-waste legislation, policy, and regulation worldwide 2014-2019. <br> https://www.statista.com/statistics/1154905/projection-ewaste-generation-worldwide/</p>
                         </div>
                     </div>
                 </section>
