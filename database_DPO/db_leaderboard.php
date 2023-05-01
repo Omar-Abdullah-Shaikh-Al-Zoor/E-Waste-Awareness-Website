@@ -8,14 +8,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $stmt = $dbObj->db_command($sql, $params);
     if ($stmt->rowCount() >0) {
         echo "
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>username</th>
-                <th>Recycling Score</th>
-                <th>Price Purchased</th>
-                <th>Time Taken</th>
-            </tr>";
+        <div class='table-responsive'>
+        <table class='table table-striped table-hover text-center'>
+            <thead>
+                <tr>
+                    <th>Game ID</th>
+                    <th>Username</th>
+                    <th>Recycling Score</th>
+                    <th>Price Purchased</th>
+                    <th>Time Taken</th>
+                </tr>
+                </thead>
+                <tbody>";
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             echo "<tr>";
             echo "<td>" . $row['game_id'] . "</td>";
@@ -25,7 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             echo "<td>" . $row['time_taken'] . "</td>";
             echo "</tr>";
         }
-        echo "</table>";
+        echo "</tbody>
+            </table>
+        </div>";
     }
     else {
         echo "No records were found";

@@ -30,6 +30,9 @@
                     <a class="nav-link font-weight-bold rounded-2 fs-5" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="about_us.php">About Us</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="solutions.php">Our Solutions</a>
                     </li>
                     <li class="nav-item">
