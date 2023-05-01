@@ -65,7 +65,7 @@
                         <a href="https://www.human-i-t.org/" class="bg-white" target="_blank">
                           <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
                             <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
-                              <img decoding="async" width="250" height="200" src="humanit.png" alt="" class="float-left"/>
+                              <img decoding="async" width="250" height="200" src="media/images/humanit.png" alt="" class="float-left"/>
                             </span>
                           </button>
                         </a>
@@ -85,7 +85,7 @@
                         <a href="https://www.itschoolsafrica.org/" class="bg-white" target="_blank">
                           <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
                             <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
-                              <img decoding="async" width="250" height="200" src="schoolafrica.png" alt="" class="float-left"/>
+                              <img decoding="async" width="250" height="200" src="media/images/schoolafrica.png" alt="" class="float-left"/>
                             </span>
                           </button>
                         </a>
@@ -105,13 +105,13 @@
                           <a href="https://comprenew.org" class="bg-white" target="_blank">
                             <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
                               <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
-                                <img decoding="async" width="250" height="200" src="comp.png" alt="" class="float-left"/>
+                                <img decoding="async" width="250" height="200" src="media/images/comp.png" alt="" class="float-left"/>
                               </span>
                             </button>
                           </a>
                         </div>
                         <h5 class="partner-header">
-                          <a href="https://comprenew.org" target="_blank">Human-I-T</a>
+                          <a href="https://comprenew.org" target="_blank">Comprenew</a>
                         </h5>
                         <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-3">More Details</button>
                         <div id="partner-details-3" class="collapse">
@@ -126,7 +126,7 @@
                             <a href="https://www.compudopt.org" class="bg-white" target="_blank">
                               <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
                                 <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
-                                  <img decoding="async" width="250" height="200" src="compudot.png" alt="" class="float-left"/>
+                                  <img decoding="async" width="250" height="200" src="media/images/compudot.png" alt="" class="float-left"/>
                                 </span>
                               </button>
                             </a>
@@ -146,7 +146,7 @@
                               <a href="https://www.computeraid.org/" class="bg-white" target="_blank">
                                 <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
                                   <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
-                                    <img decoding="async" width="250" height="200" src="compaid.png" alt="" class="float-left"/>
+                                    <img decoding="async" width="250" height="200" src="media/images/compaid.png" alt="" class="float-left"/>
                                   </span>
                                 </button>
                               </a>
@@ -166,7 +166,7 @@
                               <a href="https://rrrcomputer.org" class="bg-white" target="_blank">
                                 <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
                                   <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
-                                    <img decoding="async" width="250" height="200" src="rrr.png" alt="" class="float-left"/>
+                                    <img decoding="async" width="250" height="200" src="media/images/rrr.png" alt="" class="float-left"/>
                                   </span>
                                 </button>
                               </a>
