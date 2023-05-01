@@ -1,10 +1,11 @@
 let intervalID;
 $(document).ready(function() {
-    let startTime = Date.now();
+    
     $("#start-game").click(function() {
         intervalID = setInterval(displayTime, 30);
     });
         function displayTime() {
+            let startTime = Date.now();
             // Calculate the elapsed time in milliseconds
             let elapsed = Date.now() - startTime;
             // Display the elapsed time in milliseconds

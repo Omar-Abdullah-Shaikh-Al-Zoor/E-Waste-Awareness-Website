@@ -1,28 +1,12 @@
+let username = '<?php echo isset($_SESSION["username"]) ? $_SESSION["username"] : "" ?>';
+console.log(username);
 $(document).ready(function(){
-    var username;
-    function get_username() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onload = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                if (this.response !== "") {
-                    username = this.response;
-                    console.log(username);
-                } else {
-                    let message = "You are not logged in. You will be redirected to the login page in 5 seconds.";
-                    let loginMessage = $("#login-message");
-                    loginMessage.textContent = message;
-    
-                    setTimeout(function() {
-                        window.location.href = "login_register.php";
-                    }, 5000);
-                }
-            }
-        }
-        xmlhttp.open("GET", "database_DPO/get_username.php", true);
-        xmlhttp.send();
+    if (username === "") {
+        setTimeout(function() {
+            window.location.href = "./index.php";
+        }, 7000);
     }
-    console.log("hii");
-    get_username();    
+    
     $('#InfoModal').modal('show', {backdrop: 'static'});
     $("#start-game").click(gameStart);
     $("#start-game").click(price_updated);
@@ -88,7 +72,7 @@ function create_img(eWaste_div, drop_div) {
     const pos = getRndPosition(eWaste_div);
     img.style.left = (pos.left / window.innerWidth) * 100 + "vw";
     pos.top -= 100;
-    img.style.top = pos.top + "px";
+    img.style.top = pos.top + "vh";
     return img;
 }
     
@@ -155,7 +139,7 @@ function sendResults() {
             console.log(this.responseText);
         }
     }
-    xmlhttp.open("POST", "./scripts/results.php", true);
+    xmlhttp.open("POST", "database_DPO/gameResults.php", true);
     xmlhttp.send(formData);
 }
 
