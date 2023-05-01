@@ -45,6 +45,12 @@
     padding: 3%;
 }
 
+/* Donation Page */
+.required-label {
+    font-weight: bold;
+    color: red;
+  }
+
 /* Simulation Game */
 main#main-game {
     background: #D3CCE3;  /* fallback for old browsers */
