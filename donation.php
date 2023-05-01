@@ -32,6 +32,9 @@
                             <a class="nav-link font-weight-bold rounded-2 fs-5" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="about_us.php">About Us</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link font-weight-bold rounded-2 fs-5" href="solutions.html">Our Solutions</a>
                         </li>
                         <li class="nav-item">
@@ -266,6 +269,7 @@
                     <h5 class="text-uppercase mb-3">Pages</h5>
                     <ul class="list-unstyled mb-0">
                         <li><a class="text-primary" href="./index.php">Home</a></li>
+                        <li><a class="text-primary" href="./about_us.php">About Us</a></li>
                         <li><a class="text-primary" href="./solutions.php">Our Solutions</a></li>
                         <li><a class="text-primary" href="./success.php">Success Stories</a></li>
                         <li><a class="text-primary" href="./organizations.php">IEMN</a></li>

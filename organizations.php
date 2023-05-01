@@ -28,6 +28,9 @@
                   <a class="nav-link font-weight-bold rounded-2 fs-5" href="index.php">Home</a>
                   </li>
                   <li class="nav-item">
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="about_us.php">About Us</a>
+                        </li>
+                  <li class="nav-item">
                       <a class="nav-link font-weight-bold rounded-2 fs-5" href="solutions.php">Our Solutions</a>
                   </li>
                   <li class="nav-item">
@@ -93,6 +96,7 @@
                 <h5 class="text-uppercase mb-3">Pages</h5>
                 <ul class="list-unstyled mb-0">
                     <li><a class="text-primary" href="./index.php">Home</a></li>
+                    <li><a class="text-primary" href="./about_us.php">About Us</a></li>
                     <li><a class="text-primary" href="./solutions.php">Our Solutions</a></li>
                     <li><a class="text-primary" href="./success.php">Success Stories</a></li>
                     <li><a class="text-primary" href="./organizations.php">IEMN</a></li>
@@ -110,8 +114,6 @@
                 </ul>
                 </div>            
                 <div class="col-lg-7 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-2">About us</h5>
-                <p class="text-muted mb-3">We are a dedicated team passionate about creating positive change. With diverse backgrounds and expertise, we collaborate to find innovative solutions to society's pressing issues. Together, we strive towards a sustainable and equitable future for all.</p>
                 <h5 class="text-uppercase mb-2">Contact</h5>
                 <ul class="list-unstyled mb-0">
                     <li><i class="bi bi-geo-alt-fill me-2"></i> RIT University - Silicon Oasis, Dubai, UAE</li>
