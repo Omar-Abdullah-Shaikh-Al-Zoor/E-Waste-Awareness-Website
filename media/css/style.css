@@ -28,6 +28,23 @@
 }
 
 
+/* Success Page */
+
+.success-stories {
+    background-color: #288b0a;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+.worldwide{
+
+    height: 100px;
+    width: 100px;
+    padding: 3%;
+}
+
 /* Simulation Game */
 main#main-game {
     background: #D3CCE3;  /* fallback for old browsers */

@@ -49,47 +49,67 @@
                 </div>
             </nav>
         </header>
-        <main class="container">
-            <article class="mt-5">
-                    <h1>What are some successful E-waste management and recycling organizations?</h1>
-                    <img src="media\images\recycle.jpg" alt="Factory Worker" class="rounded mx-auto d-block img-fluid img-thumbnail my-2 w-75">
-                    <h2>Sims Recycling Solutions</h2>
-                    <p>
-                        There are several successful E-waste management and recycling companies around the world that have implemented
-                        innovative practices and have a strong commitment to sustainability. One such company is Sims Recycling Solutions,
-                        which is headquartered in the United States and operates in over 20 countries. Sims Recycling Solutions has a proven 
-                        track record of recycling electronic waste and recycled 220,000 tonnes of E-waste in 2020.
-                    </p>
-                    <h2>Electronic Recyclers International (ERI)</h2>
-                    <p>
-                        Another successful e-waste recycling company is Electronic Recyclers International (ERI), also based in the United States.
-                        ERI has a zero-landfill policy and is committed to maximizing the value of the materials it recycles. The company has received
-                        numerous awards for its environmentally friendly practices.
-                    </p>
-                    <h2>TES-AMM</h2>
-                    <p>
-                        TES-AMM is a Singapore-based E-waste recycling company that operates in over 20 countries. The company is committed to sustainability
-                        and has implemented a number of innovative recycling processes. In 2019, TES-AMM recycled over 100,000 tonnes of e-waste.
-                    </p>
-                    <h2>Greentec</h2>
-                    <p>
-                        Greentec is a Canadian e-waste recycling company that specializes in the refurbishment and resale of electronic devices.
-                        The company has a strong commitment to sustainability and has implemented a number of environmentally friendly practices.
-                        Greentec has won numerous awards for its innovative approach to E-waste recycling.
-                    </p>
-                    <h2>Attero</h2>
-                    <p>
-                        Finally, Attero is an Indian E-waste recycling company that has won several awards for its innovative recycling processes.
-                        The company has a zero-landfill policy and is committed to minimizing the environmental impact of E-waste. In 2020, Attero
-                        recycled over 25,000 tonnes of E-waste.
-                    </p>
-                    <p>
-                        These companies are just a few examples of successful E-waste management and recycling companies around the world.
-                        Each of them has implemented innovative practices and a strong commitment to sustainability, which has contributed 
-                        to their success in the industry.
-                    </p>
+        <main class="">
+            <section class="success-stories">
+                    <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <h2 class="text-white text-center">Success Stories</h2>
+                        <p class="lh-lg text-white text-center text-wrap">We are dedicated to promoting responsible e-waste disposal through education and practical solutions. Our mission is to empower individuals and organizations to make a positive impact on the environment by donating their old electronics in a responsible and sustainable way. Our Success Stories page showcases the real-life impact of our efforts, highlighting the individuals and organizations that have benefited from our resources and support. Join us on our mission to create a greener future and discover how we can make a difference together.</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                
+                <div class="container-fluid bg-light py-5">
+                    <div class="row text-center">
+                    <div class="col-md-4">
+                        <img class="worldwide" src="media/images/globe.png" alt="WorldWide">
+                        <h4 class="mb-3">Over 20+ countries worldwide</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="worldwide" src="media/images/buildings.png" alt="WorldWide">
+                        <h4 class="mb-3">More than 100+ organizations & individuals</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="worldwide" src="media/images/co2.png" alt="WorldWide">
+                        <h4 class="mb-3">Reduced CO2 emissions by 50,000+ metric tons</h4>
+                    </div>
+                    </div>
                 </div>
-            </article>
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="media/images/electronic.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                <h5 class="card-title">ABC Corporation</h5>
+                                <p class="card-text">Our organization worked with ABC Corporation, a large electronics manufacturer, to help them responsibly dispose of their e-waste. Over the course of a year, we helped ABC Corporation recycle 500,000 pounds of e-waste, preventing it from ending up in landfills and reducing carbon emissions by over 1,000,000 pounds.</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="media/images/school.jpeg" alt="Card image cap">
+                                <div class="card-body">
+                                <h5 class="card-title">XYZ School</h5>
+                                <p class="card-text">We partnered with the XYZ School District to help them recycle their old computers and other electronics. Over the course of a semester, we helped the school district recycle over 2,000 pounds of e-waste, preventing it from ending up in landfills and reducing carbon emissions by over 4,000 pounds.</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="media/images/tim.webp" alt="Card image cap">
+                                <div class="card-body">
+                                <h5 class="card-title">Tim Smith</h5>
+                                <p class="card-text">Tim Smith, a local resident, had a garage full of old electronics that he wanted to get rid of but didn't know how. Our organization provided John with a free e-waste pickup service and helped him recycle over 500 pounds of electronics, preventing them from ending up in landfills and reducing carbon emissions by over 1,000 pounds.</p>
+                                <a href="#" class="btn btn-success">Read More</a>
+                                </div>
+                            </div>
+                            </div>
+            
         </main>
         <footer class="bg-light text-center text-lg-start">
             <div class="container p-4">
