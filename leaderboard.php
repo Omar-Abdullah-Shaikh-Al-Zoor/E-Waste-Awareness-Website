@@ -25,24 +25,27 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar-main">
-                <ul class="navbar-nav m-auto padding-ul text-center">
-                    <li class="nav-item active">
+                <ul class="navbar-nav m-auto padding-ul text-center mx-auto">
+                    <li class="nav-item">
                     <a class="nav-link font-weight-bold rounded-2 fs-5" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold rounded-2 fs-5" href="solutions.php">Our Solutions</a>
+                        <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="solutions.php">Our Solutions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold rounded-2 fs-5" href="success.php">Success Stories</a>
+                        <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="success.php">Success Stories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold rounded-2 fs-5" href="organizations.php">IEMN</a>
+                        <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="organizations.php">IEMN</a>
                     </li>
+                    <li class="nav-item active">
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="leaderboard.php">Leaderboard</a>
+                        </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold rounded-2 fs-5" href="donation.php">Donate Now</a>
+                        <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="donation.php">Donate Now</a>
                     </li>
                 </ul>
-                <a class="text-decoration-none link-secondary my-sm-0 me-4" href="problem_simulation.php">
+                <a class="text-decoration-none link-secondary my-sm-0" href="problem_simulation.php">
                     <button class="btn btn-outline-primary" type="button">
                         Problem Simulation Game
                     </button> 
