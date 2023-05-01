@@ -201,7 +201,7 @@ label {
                 }
             }
         };
-        xmlhttp.open("POST", "check_email_username.php", true);
+        xmlhttp.open("POST", "database_DPO/check_email_username.php", true);
         xmlhttp.send(formData);   
     });
     (function() {
@@ -224,7 +224,8 @@ label {
                             $("#login-message").show();
                             setTimeout(function() {
                                 $("#login-message").hide();
-                            }, 3000);
+                            }, 2000);
+                            window.location.href = "index.php";
                         } else if (response === "success login") {
                             $("#login-message").html("<div class='d-flex justify-content-center'><span class='fs-5 text-success text-center'>Login successful</span></div>");
                             $("#login-message").show();
@@ -234,7 +235,7 @@ label {
                         }
                     }
                 };
-                xmlhttp.open("POST", "db_login.php", true);
+                xmlhttp.open("POST", "database_DPO/db_login.php", true);
                 xmlhttp.send(new FormData(event.target));
             } 
             else if ($("#CardBody").hasClass("sign-up")) {
@@ -251,7 +252,7 @@ label {
                         }
                     }
                 };
-                xmlhttp.open("POST", "db_register.php", true);
+                xmlhttp.open("POST", "database_DPO/db_register.php", true);
                 xmlhttp.send(new FormData(event.target));
             }
         }
