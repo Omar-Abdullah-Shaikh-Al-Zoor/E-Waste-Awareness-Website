@@ -275,7 +275,7 @@
                         <li><a class="text-primary" href="./about_us.php">About Us</a></li>
                         <li><a class="text-primary" href="./solutions.php">Our Solutions</a></li>
                         <li><a class="text-primary" href="./success.php">Success Stories</a></li>
-                        <li><a class="text-primary" href="./organizations.php">IEMN</a></li>
+                        <li><a class="text-primary" href="./organizations.php">Partners</a></li>
                         <li><a class="text-primary" href="./donation.php">Donate Now</a></li>
                         <li><a class="text-primary" href="./problem_simulation.php">Problem Simulation Game</a>
                         </li>
@@ -436,7 +436,7 @@
 
 
             }
-            xmlhttp.open("POST", "db_donation.php", true);
+            xmlhttp.open("POST", "database_DPO/db_donation.php", true);
             xmlhttp.send(new FormData(event.target));
         }
 
