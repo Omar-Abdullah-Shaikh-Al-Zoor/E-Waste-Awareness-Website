@@ -1,4 +1,17 @@
 /* Home Page */
+.stats{
+
+    height: 100px;
+    width: 100px;
+    padding: 3%;
+}
+
+.sols{
+    height: 100px;
+    width: 100px;
+    padding: 3%;
+}
+
 .cite-reference {
     background-color: #f2f2f2;
     border-left: 6px solid #282ee4;
