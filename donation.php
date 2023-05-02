@@ -395,7 +395,6 @@
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onload = function() {
                     var response = this.responseText;
-                    console.log(response);
                     if (response == "Donation received successfully") {
                         setTimeout(function() {
                             $("#modalOutput").html(`
