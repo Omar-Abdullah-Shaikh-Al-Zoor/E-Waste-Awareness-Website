@@ -153,82 +153,84 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion" id="accordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class=" text-success accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#first-collapse" aria-expanded="true" aria-controls="first-collapse">
-                            E-Waste Generation and Recycling
-                        </button>
-                    </h2>
-                    <div id="first-collapse" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <p class="text-secondary">
-                                In 2021, a staggering 57.4 million metric tonnes (Mt) of electronic waste (e-waste) was generated globally, with the total amount growing by an average of 2 Mt annually. Despite efforts to recycle and properly dispose of e-waste, over 347 Mt of unrecycled e-waste remains on Earth as of 2023. China, the United States, and India are the largest producers of e-waste, contributing significantly to the global total. Shockingly, only 17.4% of e-waste is known to be collected and properly recycled, which is a cause for concern. Estonia, Norway, and Iceland are currently leading the charge in e-waste recycling rates, with the highest percentages of e-waste being recycled in these countries.
-                            </p>
+              <section class="container">
+                <div class="accordion" id="accordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class=" text-success accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#first-collapse" aria-expanded="true" aria-controls="first-collapse">
+                                E-Waste Generation and Recycling
+                            </button>
+                        </h2>
+                        <div id="first-collapse" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p class="text-secondary">
+                                    In 2021, a staggering 57.4 million metric tonnes (Mt) of electronic waste (e-waste) was generated globally, with the total amount growing by an average of 2 Mt annually. Despite efforts to recycle and properly dispose of e-waste, over 347 Mt of unrecycled e-waste remains on Earth as of 2023. China, the United States, and India are the largest producers of e-waste, contributing significantly to the global total. Shockingly, only 17.4% of e-waste is known to be collected and properly recycled, which is a cause for concern. Estonia, Norway, and Iceland are currently leading the charge in e-waste recycling rates, with the highest percentages of e-waste being recycled in these countries.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="text-success accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#second-collapse" aria-expanded="false" aria-controls="second-collapse">
-                            The E-Waste Recycling Market
-                        </button>
-                    </h2>
-                    <div id="second-collapse" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <p class="text-secondary">
-                                The e-waste recycling market was valued at $49,880 million in 2020, indicating a growing awareness of the need for proper e-waste management. However, since data collection began in 2014, an estimated total of 420.3 million metric tonnes of e-waste have been produced, with only a small percentage of that being recycled. This number is likely an underestimation as there is no record of e-waste produced before 2014. In addition, recycling rates have varied over the years and may have been lower initially, before global awareness of the issue was raised, and more countries introduced legislation to enable proper recycling. A report released by Reports Insights earleir this year suggests that the E-waste management market will be growing at a CAGR of 3.5% from 2022 to 2030, meaning that the market is estimated to exceed USD 67.1 Billion by 2030 from a worth of USD 50.9 Billion in 2022.
-                                SOURCE: https://www.reportsinsights.com/industry-forecast/global-e-waste-management-market-statistical-analysis-673713
-                            </p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="text-success accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#second-collapse" aria-expanded="false" aria-controls="second-collapse">
+                                The E-Waste Recycling Market
+                            </button>
+                        </h2>
+                        <div id="second-collapse" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p class="text-secondary">
+                                    The e-waste recycling market was valued at $49,880 million in 2020, indicating a growing awareness of the need for proper e-waste management. However, since data collection began in 2014, an estimated total of 420.3 million metric tonnes of e-waste have been produced, with only a small percentage of that being recycled. This number is likely an underestimation as there is no record of e-waste produced before 2014. In addition, recycling rates have varied over the years and may have been lower initially, before global awareness of the issue was raised, and more countries introduced legislation to enable proper recycling. A report released by Reports Insights earleir this year suggests that the E-waste management market will be growing at a CAGR of 3.5% from 2022 to 2030, meaning that the market is estimated to exceed USD 67.1 Billion by 2030 from a worth of USD 50.9 Billion in 2022.
+                                    SOURCE: https://www.reportsinsights.com/industry-forecast/global-e-waste-management-market-statistical-analysis-673713
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="text-success accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#third-collapse" aria-expanded="false" aria-controls="third-collapse">
-                            Future E-Waste Projections
-                        </button>
-                    </h2>
-                    <div id="third-collapse" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <p class="text-secondary">
-                                An estimated 44.4 million metric tons of unwanted "e-waste," such as battery- or plug-tethered electronics including computers, smartphones, and televisions, were dumped globally in 2014. According to the Global E-Waste Monitor 2020, that amount is anticipated to increase to around 74.7 million tons by 2030. Eight times the weight of China's Three Gorges Dam would roughly be the comparison. The International Solid Waste Association, the International Telecommunication Union, and other organizations collaborated to track the buildup of electronic waste, and their conclusions are the result of that collaboration. The anticipated e-waste for 2020 and other years does not take into account any potential economic effects of the COVID-19 pandemic.  SOURCE: https://www.sciencenews.org/article/annual-e-waste-electronics-recycling-75-million-metric-tons</p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="text-success accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#third-collapse" aria-expanded="false" aria-controls="third-collapse">
+                                Future E-Waste Projections
+                            </button>
+                        </h2>
+                        <div id="third-collapse" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p class="text-secondary">
+                                    An estimated 44.4 million metric tons of unwanted "e-waste," such as battery- or plug-tethered electronics including computers, smartphones, and televisions, were dumped globally in 2014. According to the Global E-Waste Monitor 2020, that amount is anticipated to increase to around 74.7 million tons by 2030. Eight times the weight of China's Three Gorges Dam would roughly be the comparison. The International Solid Waste Association, the International Telecommunication Union, and other organizations collaborated to track the buildup of electronic waste, and their conclusions are the result of that collaboration. The anticipated e-waste for 2020 and other years does not take into account any potential economic effects of the COVID-19 pandemic.  SOURCE: https://www.sciencenews.org/article/annual-e-waste-electronics-recycling-75-million-metric-tons</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="text-success accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fourth-collapse" aria-expanded="false" aria-controls="fourth-collapse">
-                            E-Waste Statistics by Region
-                        </button>
-                    </h2>
-                    <div id="fourth-collapse" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <p class="text-secondary">
-                                Asia, the Americas, and Europe produced the overwhelming majority of e-waste when measured by total weight. Asia produced the most e-waste, with 24.9 Mt, followed by the Americas with 13.1 Mt and Europe with 12 Mt. However, when measured per capita, Europeans produce the most e-waste, with 16.2 Kg per person, followed by Oceania with 16.1 Kg per person and the Americas with 13.3 Kg per person. African residents produce the least amount of e-waste per capita. SOURCE: https://theroundup.org/global-e-waste-statistics/
-                            </p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="text-success accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fourth-collapse" aria-expanded="false" aria-controls="fourth-collapse">
+                                E-Waste Statistics by Region
+                            </button>
+                        </h2>
+                        <div id="fourth-collapse" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p class="text-secondary">
+                                    Asia, the Americas, and Europe produced the overwhelming majority of e-waste when measured by total weight. Asia produced the most e-waste, with 24.9 Mt, followed by the Americas with 13.1 Mt and Europe with 12 Mt. However, when measured per capita, Europeans produce the most e-waste, with 16.2 Kg per person, followed by Oceania with 16.1 Kg per person and the Americas with 13.3 Kg per person. African residents produce the least amount of e-waste per capita. SOURCE: https://theroundup.org/global-e-waste-statistics/
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="text-success accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fifth-collapse" aria-expanded="false" aria-controls="fifth-collapse">
-                            Will E-Waste Continue to Increase in the Future?
-                        </button>
-                    </h2>
-                    <div id="fifth-collapse" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <p class="text-secondary">
-                                Global electronic waste volume is projected to grow to 74.7 Mt by 2030, indicating a doubling of the current volume in only 16 years. The global e-waste generation has increased by 2 Mt annually over the last decade, making this projection a likely outcome. Therefore, it is critical to consider the impact that this projected increase in e-waste will have on the environment, economy, and society.
-                            </p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="text-success accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fifth-collapse" aria-expanded="false" aria-controls="fifth-collapse">
+                                Will E-Waste Continue to Increase in the Future?
+                            </button>
+                        </h2>
+                        <div id="fifth-collapse" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p class="text-secondary">
+                                    Global electronic waste volume is projected to grow to 74.7 Mt by 2030, indicating a doubling of the current volume in only 16 years. The global e-waste generation has increased by 2 Mt annually over the last decade, making this projection a likely outcome. Therefore, it is critical to consider the impact that this projected increase in e-waste will have on the environment, economy, and society.
+                                </p>
+                            </div>
                         </div>
                     </div>
+                    <div class="cite-reference mb-5">
+                        <p>The Roundup. (2023). Global E-Waste Statistics. Retrieved from <a href="https://theroundup.org/global-e-waste-statistics/" target="_blank" rel="noopener">https://theroundup.org/global-e-waste-statistics/</a></p>
+                        <p class="cite-source">Source: The Roundup (2023)</p>
+                    </div>
                 </div>
-                <div class="cite-reference">
-                    <p>The Roundup. (2023). Global E-Waste Statistics. Retrieved from <a href="https://theroundup.org/global-e-waste-statistics/" target="_blank" rel="noopener">https://theroundup.org/global-e-waste-statistics/</a></p>
-                    <p class="cite-source">Source: The Roundup (2023)</p>
-                </div>
-            </div>
+            </section>
           
 
 
@@ -242,7 +244,7 @@
                         <li><a class="text-primary" href="./about_us.php">About Us</a></li>
                         <li><a class="text-primary" href="./solutions.php">Our Solutions</a></li>
                         <li><a class="text-primary" href="./success.php">Success Stories</a></li>
-                        <li><a class="text-primary" href="./organizations.php">IEMN</a></li>
+                        <li><a class="text-primary" href="./organizations.php">Partners</a></li>
                         <li><a class="text-primary" href="./donation.php">Donate Now</a></li>
                         <li><a class="text-primary" href="./problem_simulation.php">Problem Simulation Game</a></li>
                     </ul>
