@@ -105,7 +105,7 @@
                     $('#fail-Modal').modal('show', {backdrop: 'static'});
                     setTimeout(function() {
                         window.location.href = "./login.php";
-                    }, 8000);
+                    }, 5000);
                 } else {
                     $('#InfoModal').modal('show', {backdrop: 'static'});
                     $("#start-game").click(gameStart);

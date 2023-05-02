@@ -97,31 +97,28 @@
 
             <div class="container py-5 mx-5">
                 <div class="row align-items-center">
-                  <div class="col-md-6">
-                    <div class="ratio ratio-16x9 d-flex" style="--bs-aspect-ratio: 60%;">
-                        <iframe src="https://www.youtube.com/embed/TyEHtZz0hPA"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen class="d-block mx-lg-auto rounded-3 align-self-md-auto img-thumbnail rounded mx-auto d-block">
-                        </iframe>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9 d-flex" style="--bs-aspect-ratio: 60%;">
+                            <iframe src="https://www.youtube.com/embed/TyEHtZz0hPA"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen class="d-block mx-lg-auto rounded-3 align-self-md-auto img-thumbnail rounded mx-auto d-block">
+                            </iframe>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 align-self-start pb-3">
-                    <h3 class="text-success"><strong>Why is E-Waste a Growing Problem?</strong></h3>
-                    <p class="problem-para" style="font-family:'Mulish';">Improper disposal of E-waste causes severe environmental damage, as it is often left for scrap, burned, processed by hand, or illegally dumped. E-waste contains toxic chemicals that can poison the soil and water, and if not disposed of properly, can lead to serious health issues such as cancers, miscarriages, brain and liver damage, and other illnesses.The world is facing a growing e-waste problem. The amount of e-waste generated each year is increasing at an alarming rate, and the ammount of E-waste recycled is having a minimal impact. According to a report from Statista, over 50 million metric tons of E-waste is generated globally every year, and what's worse is that only around 17% is of generated E-waste is properly recycled(cycles & Text, 2022).</p>
-                    <a class="text-decoration-none link-secondary my-sm-0 center" href="solutions.php">
-                        <button class="btn btn-success w-25" type="button">
-                            Our Solutions
-                        </button> 
-                    </a>
-                  </div>
+                    <div class="col-md-6 align-self-start pb-3">
+                        <h3 class="text-success"><strong>Why is E-Waste a Growing Problem?</strong></h3>
+                        <p class="problem-para" style="font-family:'Mulish';">Improper disposal of E-waste causes severe environmental damage, as it is often left for scrap, burned, processed by hand, or illegally dumped. E-waste contains toxic chemicals that can poison the soil and water, and if not disposed of properly, can lead to serious health issues such as cancers, miscarriages, brain and liver damage, and other illnesses.The world is facing a growing e-waste problem. The amount of e-waste generated each year is increasing at an alarming rate, and the amount of E-waste recycled is having a minimal impact. According to a report from Statista, over 50 million metric tons of E-waste is generated globally every year, and what's worse is that only around 17% is of generated E-waste is properly recycled (cycles & Text, 2022).</p>
+                        <a class="text-decoration-none link-secondary my-sm-0 center" href="solutions.php">
+                            <button class="btn btn-success w-25" type="button">
+                                Our Solutions
+                            </button> 
+                        </a>
+                    </div>
                 </div>
-              </div>
-              
-
-
-              </div>
-              <article class="container-fluid py-5 d-flex flex-column">
+            </div>
+        </div>
+            <article class="container-fluid py-5 d-flex flex-column">
                     <div class="row">
                     <div class="col-md-3">
                         <div class="text-center">
@@ -164,7 +161,7 @@
                             <div id="first-collapse" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <p class="text-secondary">
-                                        In 2021, a staggering 57.4 million metric tonnes (Mt) of electronic waste (e-waste) was generated globally, with the total amount growing by an average of 2 Mt annually. Despite efforts to recycle and properly dispose of e-waste, over 347 Mt of unrecycled e-waste remains on Earth as of 2023. China, the United States, and India are the largest producers of e-waste, contributing significantly to the global total. Shockingly, only 17.4% of e-waste is known to be collected and properly recycled, which is a cause for concern. Estonia, Norway, and Iceland are currently leading the charge in e-waste recycling rates, with the highest percentages of e-waste being recycled in these countries (Ruiz, n.d.).
+                                        In 2021, a staggering 57.4 million metric tonnes (Mt) of electronic waste (e-waste) was generated globally, with the total amount growing by an average of 2 Mt annually. Despite efforts to recycle and properly dispose of e-waste, over 347 Mt of un-recycled e-waste remains on Earth as of 2023. China, the United States, and India are the largest producers of e-waste, contributing significantly to the global total. Shockingly, only 17.4% of e-waste is known to be collected and properly recycled, which is a cause for concern. Estonia, Norway, and Iceland are currently leading the charge in e-waste recycling rates, with the highest percentages of e-waste being recycled in these countries (Ruiz, n.d.).
                                     </p>
                                 </div>
                             </div>
@@ -178,7 +175,7 @@
                             <div id="second-collapse" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <p class="text-secondary">
-                                        The e-waste recycling market was valued at $49,880 million in 2020, indicating a growing awareness of the need for proper e-waste management. However, since data collection began in 2014, an estimated total of 420.3 million metric tonnes of e-waste have been produced, with only a small percentage of that being recycled. This number is likely an underestimation as there is no record of e-waste produced before 2014. In addition, recycling rates have varied over the years and may have been lower initially, before global awareness of the issue was raised, and more countries introduced legislation to enable proper recycling. A report released by Reports Insights earleir this year suggests that the E-waste management market will be growing at a CAGR of 3.5% from 2022 to 2030, meaning that the market is estimated to exceed USD 67.1 Billion by 2030 from a worth of USD 50.9 Billion in 2022 (Reports Insights, 2023).</p>
+                                        The e-waste recycling market was valued at $49,880 million in 2020, indicating a growing awareness of the need for proper e-waste management. However, since data collection began in 2014, an estimated total of 420.3 million metric tonnes of e-waste have been produced, with only a small percentage of that being recycled. This number is likely an underestimation as there is no record of e-waste produced before 2014. In addition, recycling rates have varied over the years and may have been lower initially, before global awareness of the issue was raised, and more countries introduced legislation to enable proper recycling. A report released by Reports Insights earlier this year suggests that the E-waste management market will be growing at a CAGR of 3.5% from 2022 to 2030, meaning that the market is estimated to exceed USD 67.1 Billion by 2030 from a worth of USD 50.9 Billion in 2022 (Reports Insights, 2023).</p>
                                 </div>
                             </div>
                         </div>

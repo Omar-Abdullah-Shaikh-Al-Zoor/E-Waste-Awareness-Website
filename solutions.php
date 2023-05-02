@@ -115,13 +115,13 @@
                             <p>Enforcing government laws and policies that ensure the proper disposal of e-waste, and fining anyone who violates those laws.
                                 Governments may resort to a similar solution because raising awareness and educating consumers about the proper methods of handling 
                                 e-waste may not be enough by itself. Governments world wide need provide dedicated E-waste collection and transportation services to reduce
-                                the chance of E-waste being handled in an enviromentally damaging manner.</p>
+                                the chance of E-waste being handled in an environmentally damaging manner.</p>
 
-                                <p>Figure 1 shows the Countries covered by electronic waste legislation, policy, and regulation from the period of 2014 until 2019: </p>
+                                <p>Figure 1 shows the Countries covered by electronic waste legislation, policy, and regulation in the years 2014, 2017 and 2019: </p>
                                 <figure class="mt-4">
                                 <strong class="ms-5">Figure 1</strong><br/> 
-                                <img src="media\images\Government E-waste Regulation.png" alt="Statistics of countries enforcing E-waste regulations and policies">
-                                <figcaption class="ms-5"><small>Note. Countries covered by electronic waste legislation, policy, and regulation from 2014 to 2019. From Countries covered by electronic waste legislation, policy, and regulation from 2014 to 2019, by I. Tiseo, 2023, Statista. https://www.statista.com/statistics/1154905/projection-ewaste-generation-worldwide/.</small></figcaption>
+                                <img src="./media/images/Government_E-waste_Regulation.png" alt="Statistics of countries enforcing E-waste regulations and policies" class="img-fluid w-75 ms-5">
+                                <figcaption class="ms-5"><small>Note. Countries covered by electronic waste legislation, policy, and regulation in 2014, 2017 and 2019. From Global E-waste Monitor, by ITU, 2020. https://www.itu.int/en/ITU-D/Environment/Pages/Spotlight/Global-Ewaste-Monitor-2020.aspxMonitor</small></figcaption>
                                 </figure>
                                 
                         </div>
