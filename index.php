@@ -15,7 +15,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="media/images/logo.png" width="50" height="50" alt="logo">
+                        <img src="media/images/logos.png" width="50" height="50" alt="logo">
                     </a>
                     <span class="navbar-text font-weight-bold">
                         E-Waste
@@ -38,7 +38,7 @@
                             <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="success.php">Success Stories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold rounded-2 fs-5 " href="organizations.php">IEMN</a>
+                            <a class="nav-link font-weight-bold rounded-2 fs-5 " href="organizations.php">Partners</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link font-weight-bold rounded-2 fs-5 " href="leaderboard.php">Leaderboard</a>
