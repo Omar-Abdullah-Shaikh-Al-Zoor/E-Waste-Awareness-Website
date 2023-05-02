@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>E-Waste Awareness | Organizations</title>
+        <title>E-Waste Awareness | Partners</title>
         <link rel="stylesheet" href="media/css/style.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
     <body>
       <header>
@@ -38,7 +39,7 @@
                       <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="success.php">Success Stories</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link font-weight-bold rounded-2 fs-5" href="organizations.php">Partners</a>
+                      <a class="nav-link font-weight-bold rounded-2 fs-5" href="partners.php">Partners</a>
                   </li>
                   <li class="nav-item">
                             <a class="nav-link font-weight-bold rounded-2 fs-5 " href="leaderboard.php">Leaderboard</a>
@@ -77,10 +78,10 @@
                       <h5 class="partner-header">
                         <a href="https://www.human-i-t.org/" target="_blank">Human-I-T</a>
                       </h5>
-                      <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-1">More Details</button>
+                      <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-1" id="Human-I-T">More Details</button>
                       <div id="partner-details-1" class="collapse">
                         <span class="card card-body">
-                          Human-I-T is a nonprofit and social enterprise that creates equitable access to opportunity by providing devices, internet access, digital skills training, and tech support for communities left on the wrong side of the digital divide, while at the same time, empowering businesses and organizations to do good by diverting technology from landfills to protect our planet.
+                          Human-I-T is a nonprofit and social enterprise that creates equitable access to opportunity by providing devices, internet access, digital skills training, and tech support for communities left on the wrong side of the digital divide, while at the same time, empowering businesses and partners to do good by diverting technology from landfills to protect our planet.
                         </span>
                       </div>
                     </div>
@@ -97,7 +98,7 @@
                       <h5 class="partner-header">
                         <a href="https://www.itschoolsafrica.org/" target="_blank">IT SCHOOLS AFRICA</a>
                       </h5>
-                      <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-2">More Details</button>
+                      <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-2" id="IT-Schools-Africa">More Details</button>
                       <div id="partner-details-2" class="collapse">
                         <span class="card card-body">
                             IT Schools Africa provides e-Learning technology to improve life opportunities for school students and local communities in Africa and the UK. We support SDG 4 quality education, improving digital literacy where we work.
@@ -117,7 +118,7 @@
                         <h5 class="partner-header">
                           <a href="https://comprenew.org" target="_blank">Comprenew</a>
                         </h5>
-                        <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-3">More Details</button>
+                        <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-3" id="Comprenew">More Details</button>
                         <div id="partner-details-3" class="collapse">
                           <span class="card card-body">
                             Comprenew strives to protect businesses, people and the environment from the threat of improperly disposed electronic devices through best practice technology data management, asset recovery and recycling services, while fostering job readiness and computer literacy among at-risk populations in our community.
@@ -138,10 +139,10 @@
                           <h5 class="partner-header">
                             <a href="https://www.compudopt.org" target="_blank">Compudopt</a>
                           </h5>
-                          <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-4">More Details</button>
+                          <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-4" id="Compudopt">More Details</button>
                           <div id="partner-details-4" class="collapse">
                             <span class="card card-body">
-                                Compudopt was founded in 2007 by Jonathan Osha, with the belief that every child deserves equal access to education and opportunity. He realized that the life cycle of a computer in a corporate environment is typically less than three years. Usually sent to landfill or shelved, these lightly used tools can become a dream come true for a young learner ready to broaden their skills and knowledge, as well as an opportunity to demonstrate good environmental stewardship by our partner organizations. 
+                                Compudopt was founded in 2007 by Jonathan Osha, with the belief that every child deserves equal access to education and opportunity. He realized that the life cycle of a computer in a corporate environment is typically less than three years. Usually sent to landfill or shelved, these lightly used tools can become a dream come true for a young learner ready to broaden their skills and knowledge, as well as an opportunity to demonstrate good environmental stewardship by our partner partners. 
                             </span>
                           </div>
                         </div>
@@ -158,10 +159,10 @@
                             <h5 class="partner-header">
                               <a href="https://www.computeraid.org/" target="_blank">ComputerAid</a>
                             </h5>
-                            <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-5">More Details</button>
+                            <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-5" id="ComputerAid">More Details</button>
                             <div id="partner-details-5" class="collapse">
                               <span class="card card-body">
-                                We use computers and other ICT equipment to improve lives by enhancing educational experiences. We receive donations of computers, tablets and mobile telephones from individuals, companies, schools, universities and government agencies. These are then data-wiped, professionally refurbished and used in our projects to help bridge the digital divide.
+                              ComputerAid use computers and other ICT equipment to improve lives by enhancing educational experiences. They receive donations of computers, tablets and mobile telephones from individuals, companies, schools, universities and government agencies. These are then data-wiped, professionally refurbished and used in their projects to help bridge the digital divide.
                               </span>
                             </div>
                           </div>
@@ -170,7 +171,7 @@
                               <a href="https://rrrcomputer.org" class="bg-white" target="_blank">
                                 <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
                                   <span class="et_pb_image_wrap et_pb_only_image_mode_wrap">
-                                    <img decoding="async" width="250" height="200" src="media/images/rrr.png" alt="" class="float-left"/>
+                                    <img decoding="async" width="250" height="200" src="media/images/rrr.png" alt="RRR Computer logo" class="float-left"/>
                                   </span>
                                 </button>
                               </a>
@@ -178,17 +179,13 @@
                             <h5 class="partner-header">
                               <a href="https://rrrcomputer.org" target="_blank">RRR Computer</a>
                             </h5>
-                            <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-6">More Details</button>
+                            <button class="btn btn-outline-secondary more-details-button" data-bs-toggle="collapse" data-bs-target="#partner-details-6" id="RRR-Computer">More Details</button>
                             <div id="partner-details-6" class="collapse">
-                              <span class="card card-body">
-                                Our Mission Is To Facilitate School Laptop Donations & Promote digital inclusion by repurposing computing devices for the next generation. We encourage corporations to donate rather than recycle their laptop computers. We then refurbish the laptop computers to give to low-income K-12 kids for education.
-                              </span>
+                              
                             </div>
                           </div>
                     
                   </div>
-                 
-
       </section>
       <footer class="bg-light text-center text-lg-start">
         <div class="container p-4">
@@ -200,7 +197,7 @@
                     <li><a class="text-primary" href="./about_us.php">About Us</a></li>
                     <li><a class="text-primary" href="./solutions.php">Our Solutions</a></li>
                     <li><a class="text-primary" href="./success.php">Success Stories</a></li>
-                    <li><a class="text-primary" href="./organizations.php">Partners</a></li>
+                    <li><a class="text-primary" href="./partners.php">Partners</a></li>
                     <li><a class="text-primary" href="./donation.php">Donate Now</a></li>
                     <li><a class="text-primary" href="./problem_simulation.php">Problem Simulation Game</a></li>
                 </ul>
@@ -226,4 +223,32 @@
         </div>
     </footer>
   </body>
+  <script>
+    $(document).ready(function(){
+        function ajax_post(partner, callback) {
+          var xmlhttp = new XMLHttpRequest();
+          var content = "";
+          xmlhttp.onload = function (){
+            if (this.responseText === "retrieval failed"){
+              content = "Unfortunately, Could not retrieve partner Information from database";
+            } else {
+              content = this.responseText;
+            }
+            callback(content);
+          };
+          xmlhttp.open("GET", "database_DPO/db_partners?partner=" + partner, true);
+          xmlhttp.send();
+        }
+        
+        $(".more-details-button").click(function () {
+          var self = this;
+          ajax_post($(this).attr("id"), function(content) {
+            console.log(content);
+            $(self).next().html("<span class='card card-body'>"+content+"</span>");
+          });
+        });
+      });
+
+
+  </script>
 </html>

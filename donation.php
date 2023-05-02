@@ -41,7 +41,7 @@
                             <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="success.php">Success Stories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="organizations.php">Partners</a>
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="partners.php">Partners</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link font-weight-bold rounded-2 fs-5 " href="leaderboard.php">Leaderboard</a>
@@ -275,7 +275,7 @@
                         <li><a class="text-primary" href="./about_us.php">About Us</a></li>
                         <li><a class="text-primary" href="./solutions.php">Our Solutions</a></li>
                         <li><a class="text-primary" href="./success.php">Success Stories</a></li>
-                        <li><a class="text-primary" href="./organizations.php">Partners</a></li>
+                        <li><a class="text-primary" href="./partners.php">Partners</a></li>
                         <li><a class="text-primary" href="./donation.php">Donate Now</a></li>
                         <li><a class="text-primary" href="./problem_simulation.php">Problem Simulation Game</a>
                         </li>
@@ -372,6 +372,8 @@
             $("#device-model").prop("disabled", boolean);
             $("#device-age").prop("disabled", boolean);
             $("#device-description").prop("disabled", boolean);
+            $("#device-brand").prop("required", !boolean);
+            $("#device-model").prop("required", !boolean);
         };
         disableInputs(true);
 
@@ -392,8 +394,8 @@
         function ajax_post() {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onload = function() {
-                if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-                    var response = xmlhttp.responseText;
+                    var response = this.responseText;
+                    console.log(response);
                     if (response == "Donation received successfully") {
                         setTimeout(function() {
                             $("#modalOutput").html(`
@@ -414,6 +416,7 @@
                         $("#donation-form input, #donation-form select, #donation-form textarea").val(
                             "");
                         disableInputs(true);
+                        updateRequiredFields()
                     } else {
                         setTimeout(function() {
                             $("#modalOutput").html(`
@@ -432,9 +435,7 @@
                             $("#donation-modal").modal("toggle");
                         }, 50);
                     }
-                }
-
-
+                
             }
             xmlhttp.open("POST", "database_DPO/db_donation.php", true);
             xmlhttp.send(new FormData(event.target));
@@ -455,6 +456,7 @@
         });
 
         $("#confirm-donation-button").click(function() {
+            $("#confirmation-modal").modal("hide");
             ajax_post();
             return false;
         });

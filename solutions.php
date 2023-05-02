@@ -37,7 +37,7 @@
                             <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="success.php">Success Stories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="organizations.php">Partners</a>
+                            <a class="nav-link font-weight-bold rounded-2 fs-5" href="partners.php">Partners</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link font-weight-bold rounded-2 fs-5 " href="leaderboard.php">Leaderboard</a>
@@ -58,10 +58,10 @@
         <main class="container mt-5">
             <article>
                 <section>
-                    <h1 class="text-center">Are there any solutions to this issue?</h1>
-                    <p class="ms-4 fs-5"> Our organization serves as an all-in-one central hub that collects your E-waste and sends masses of E-waste to our hard-working partners, who are dedicated towards creating a more sustainable enviroment.
-                         This way, our partners will handle massive amounts of E-waste in a more clean and enviroment-firendly manner, and you won't have to deal with the hassle of cleaning
-                          your property from E-waste. While our website does provide ways to rid yourself from E-waste, there are also ways for you to deal with E-waste yourself:</p>
+                    <h1 class="text-center">Are there any solutions to the e-waste issue?</h1>
+                    <p class="ms-4 fs-5"> Our organization serves as an all-in-one central hub that collects your E-waste and sends masses of E-waste to our hard-working partners, who are dedicated towards creating a more sustainable environment.
+                        This way, our partners will handle massive amounts of E-waste in a more clean and environment-friendly manner, and you won't have to deal with the hassle of cleaning
+                        your property from E-waste. While our website does provide ways to rid yourself from E-waste, there are also ways for you to deal with E-waste yourself:</p>
                 </section>
                 <section>
                     <div class="card  my-3">
@@ -69,12 +69,7 @@
                             <h4 class="card-title">Don't just abandon it! give it a new home and purpose</h4>
                         </div>
                         <div class="card-body">
-                            <p class="card-text ms-4">As mentioned before, E-waste contains toxic chemicals that are dangerous for people and the environment. For example, burning electronics can result in the release of dangerous fumes, which pollutes the air and causes detrimental health issues for people who inhale it. Instead of relying on such methods, people could rely on a more environmentally friendly method to dispose of electronics that have reached the end of their life cycle, like sending them to a designated e-waste recycling facility that recycles e-waste and recovers precious metal such as gold, silver, copper, etc.</p>
-                            <br>
-                            <p>(E-Waste & Its Negative Effects on the Environment | Elytus, n.d.)</p>
-                            <p>E-Waste & its Negative Effects on the Environment | Elytus. (n.d.).
-                                <br> https://elytus.com/blog/e-waste-and-its-negative-effects-on-the-environment.html</p>
-                            <br>
+                            <p class="card-text ms-4">As mentioned before, E-waste contains toxic chemicals that are dangerous for people and the environment. For example, burning electronics can result in the release of dangerous fumes, which pollutes the air and causes detrimental health issues for people who inhale it. Instead of relying on such methods, people could rely on a more environmentally friendly method to dispose of electronics that have reached the end of their life cycle, like sending them to a designated e-waste recycling facility that recycles e-waste and recovers precious metal such as gold, silver, copper, etc (E-Waste & Its Negative Effects on the Environment | Elytus, n.d.).</p>
 
                             <p>If you wonder how facilities recycle E-waste, then here's how:</p>
                             <ul class="list-group ms-4 mb-3">
@@ -120,14 +115,15 @@
                             <p>Enforcing government laws and policies that ensure the proper disposal of e-waste, and fining anyone who violates those laws.
                                 Governments may resort to a similar solution because raising awareness and educating consumers about the proper methods of handling 
                                 e-waste may not be enough by itself. Governments world wide need provide dedicated E-waste collection and transportation services to reduce
-                                 the chance of E-waste being handled in an enviromentally damaging manner.</p>
+                                the chance of E-waste being handled in an enviromentally damaging manner.</p>
 
-                                <p>Countries covered by electronic waste legislation, policy, and regulation from 2014 to 2019: </p>
+                                <p>Figure 1 shows the Countries covered by electronic waste legislation, policy, and regulation from the period of 2014 until 2019: </p>
+                                <figure class="mt-4">
+                                <strong class="ms-5">Figure 1</strong><br/> 
                                 <img src="media\images\Government E-waste Regulation.png" alt="Statistics of countries enforcing E-waste regulations and policies">
-                                <br>
-                                <p>(Statista, 2023)</p>
-                                <br>
-                                <p>Statista. (2023, February 6). Countries covered by e-waste legislation, policy, and regulation worldwide 2014-2019. <br> https://www.statista.com/statistics/1154905/projection-ewaste-generation-worldwide/</p>
+                                <figcaption class="ms-5"><small>Note. Countries covered by electronic waste legislation, policy, and regulation from 2014 to 2019. From Countries covered by electronic waste legislation, policy, and regulation from 2014 to 2019, by I. Tiseo, 2023, Statista. https://www.statista.com/statistics/1154905/projection-ewaste-generation-worldwide/.</small></figcaption>
+                                </figure>
+                                
                         </div>
                     </div>
                 </section>
@@ -143,7 +139,7 @@
                         <li><a class="text-primary" href="./about_us.php">About Us</a></li>
                         <li><a class="text-primary" href="./solutions.php">Our Solutions</a></li>
                         <li><a class="text-primary" href="./success.php">Success Stories</a></li>
-                        <li><a class="text-primary" href="./organizations.php">Partners</a></li>
+                        <li><a class="text-primary" href="./partners.php">Partners</a></li>
                         <li><a class="text-primary" href="./donation.php">Donate Now</a></li>
                         <li><a class="text-primary" href="./problem_simulation.php">Problem Simulation Game</a></li>
                     </ul>

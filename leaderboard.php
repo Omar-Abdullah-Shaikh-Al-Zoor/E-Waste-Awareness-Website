@@ -40,7 +40,7 @@
                         <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="success.php">Success Stories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="organizations.php">Partners</a>
+                        <a class="nav-link font-weight-bold rounded-2 fs-5 no_wrap" href="partners.php">Partners</a>
                     </li>
                     <li class="nav-item active">
                             <a class="nav-link font-weight-bold rounded-2 fs-5" href="leaderboard.php">Leaderboard</a>
@@ -86,7 +86,7 @@
                     <li><a class="text-primary" href="./about_us.php">About Us</a></li>
                     <li><a class="text-primary" href="./solutions.php">Our Solutions</a></li>
                     <li><a class="text-primary" href="./success.php">Success Stories</a></li>
-                    <li><a class="text-primary" href="./organizations.php">Partners</a></li>
+                    <li><a class="text-primary" href="./partners.php">Partners</a></li>
                     <li><a class="text-primary" href="./donation.php">Donate Now</a></li>
                     <li><a class="text-primary" href="./problem_simulation.php">Problem Simulation Game</a></li>
                 </ul>

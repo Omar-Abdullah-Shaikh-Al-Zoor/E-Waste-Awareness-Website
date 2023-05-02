@@ -42,8 +42,12 @@
 .no_wrap {
     white-space: nowrap;
 }
-
-
+.home-section  {
+    background-color: #caecca;
+}
+.problem-para {
+    font-size: 1.07rem;
+}
 /* Success Page */
 
 .success-stories {

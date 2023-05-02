@@ -22,20 +22,32 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $donation_frequency = strtolower($_POST['donation-frequency']);
     $device_type = $_POST['device-type'];
 
-    $device_condition = $_POST['device-condition'];
-    $device_brand = $_POST['device-brand'];
-    $device_model = $_POST['device-model'];
-    $device_age = $_POST['device-age'];
-    $device_description = $_POST['device-description'];
+    function getDeviceData() {
+        $data = array();
+        $fields = array('device-condition', 'device-brand', 'device-model', 'device-age', 'device-description');
+        foreach ($fields as $field) {
+            if (!isset($_POST[$field]) || empty($_POST[$field])) {
+                $data[$field] = "";
+            } else {
+                $data[$field] = $_POST[$field];
+            }
+        }
+        return $data;
+    }
+    $deviceData = getDeviceData();
+    $device_condition = $deviceData['device-condition'];
+    $device_brand = $deviceData['device-brand'];
+    $device_model = $deviceData['device-model'];
+    $device_age = $deviceData['device-age'];
+    $device_description = $deviceData['device-description'];
 
     // Insert the donator's information into the database
     // Its ID is auto-increment
     $sql = "INSERT INTO donator (first_name, last_name, phone_number, email, address_1, address_2, city, country) VALUES (?,?,?,?,?,?,?,?)";
     $params = [$first_name, $last_name, $phone_number, $email, $address_1, $address_2, $city, $country];
-
-    if ($stmt = $dbObj->db_command($sql, $params)) {
+    $stmt = $dbObj->db_command($sql, $params);
+    if ($stmt) {
         $donator_id = $dbObj->conn->lastInsertId();
-        
         $sql_card = "SELECT * FROM donation_card WHERE card_number = ?";
         $params_card = [$card_number];
         $result_card = $dbObj->db_command($sql_card, $params_card);
